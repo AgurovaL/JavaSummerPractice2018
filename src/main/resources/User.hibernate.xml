@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.agurova.models">
+    <class name="User" table="User">
+        <id name="id" column="ID_user">
+            <generator class="native"/>
+        </id>
+
+        <property name="name" column="Name"/>
+        <property name="login" column="Login"/>
+        <property name="password" column="Password"/>
+
+        <bag name="favoriteImagesList" table="Favorite_image">
+            <key column="ID_user"></key>
+            <many-to-many column="image_id" class="com.agurova.models.Image"/>
+        </bag>
+
+    </class>
+</hibernate-mapping>

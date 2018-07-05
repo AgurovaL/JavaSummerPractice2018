@@ -1,0 +1,32 @@
+package com.agurova.hibernate;
+
+import org.hibernate.HibernateException;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.service.ServiceRegistry;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+
+import java.io.File;
+
+public class HibernateUtil {
+    private static final SessionFactory sessionFactory = configureSessionFactory();
+    private static ServiceRegistry serviceRegistry;
+
+     // Создание фабрики
+    private static SessionFactory configureSessionFactory() throws HibernateException {
+
+        //конфигурационный файл
+        File file = new File("src/main/resources/hibernate.cfg.xml");
+        Configuration configuration = new Configuration().configure(file);
+
+        serviceRegistry = new StandardServiceRegistryBuilder()
+                .applySettings(configuration.getProperties())
+                .build();
+        return configuration.buildSessionFactory(serviceRegistry);
+    }
+
+     //Получить фабрику сессий
+    public static SessionFactory getSessionFactory() {
+        return sessionFactory;
+    }
+}
