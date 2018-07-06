@@ -16,8 +16,11 @@ public class HibernateUtil {
     private static SessionFactory configureSessionFactory() throws HibernateException {
 
         //конфигурационный файл
-        File file = new File("src/main/resources/hibernate.cfg.xml");
-        Configuration configuration = new Configuration().configure(file);
+       // File file = new File("src/main/resources/hibernate.cfg.xml");
+        Configuration configuration = new Configuration()
+                .addResource("Image.hibernate.xml")
+                .addResource("User.hibernate.xml")
+                .configure();
 
         serviceRegistry = new StandardServiceRegistryBuilder()
                 .applySettings(configuration.getProperties())

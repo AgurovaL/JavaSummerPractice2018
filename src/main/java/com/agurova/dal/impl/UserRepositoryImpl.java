@@ -2,35 +2,43 @@ package com.agurova.dal.impl;
 
 import com.agurova.dal.UserRepository;
 import com.agurova.hibernate.HibernateUtil;
+import com.agurova.models.Image;
 import com.agurova.models.User;
 import org.hibernate.Hibernate;
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 
 import java.util.List;
 
 public class UserRepositoryImpl implements UserRepository {
 
-    public Long addUser(User user) {
-        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+    public void addUser(User user) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
-        Long result = (Long) session.save(user);
+        session.save(user);
+        session.flush();
         session.getTransaction().commit();
-        return result;
     }
 
     public User findByID(Long id) {
-        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        Session session = HibernateUtil.getSessionFactory().openSession();
         User resultUser = (User) session.load(User.class, id);
-//!!!!!!!!!!!!!!!!!get/Load
         Hibernate.initialize(resultUser.getFavoriteImagesList());
         return resultUser;
     }
 
-    public User findByName(String name) {
-        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
-        User resultUser = (User) session.load(User.class, name);
-        Hibernate.initialize(resultUser.getFavoriteImagesList());
-        return resultUser;
+    public void deleteUser(Long id) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        try{
+            session.beginTransaction();
+            User user = (User) session.get(User.class, id);
+            session.delete(user);
+            session.getTransaction().commit();
+        }
+        catch (HibernateException e){
+            e.printStackTrace();
+            session.getTransaction().rollback();
+        }
     }
 
     public List<User> getAll() {

@@ -2,18 +2,17 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
-<hibernate-mapping package="com.agurova.models">
-    <class name="User" table="User">
-        <id name="id" column="ID_user">
-            <generator class="native"/>
+<hibernate-mapping>
+    <class name="com.agurova.models.User" table="customers">
+        <id name="id" type="long" column="id">
+            <generator class="identity" />
         </id>
+        <property name="name" column="name" type="string"/>
+        <property name="login" column="login" type="string"/>
+        <property name="password" column="password" type="string"/>
 
-        <property name="name" column="Name"/>
-        <property name="login" column="Login"/>
-        <property name="password" column="Password"/>
-
-        <bag name="favoriteImagesList" table="Favorite_image">
-            <key column="ID_user"></key>
+        <bag name="favoriteImagesList" table="favorite_image" cascade="all">
+            <key column="id"/>
             <many-to-many column="image_id" class="com.agurova.models.Image"/>
         </bag>
 
