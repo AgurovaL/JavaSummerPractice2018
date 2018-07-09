@@ -1,0 +1,10 @@
+{
+  "userId": 32,
+  "firstName": "Ivan",
+  "lastName": "Ivanov",
+  "address": {
+    "country": "Russia",
+    "city": "Moscow"
+  },
+  "phone": "8 (905) 777 77 77"
+}

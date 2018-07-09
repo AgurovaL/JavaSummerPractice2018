@@ -12,11 +12,9 @@ public class HibernateUtil {
     private static final SessionFactory sessionFactory = configureSessionFactory();
     private static ServiceRegistry serviceRegistry;
 
-     // Создание фабрики
     private static SessionFactory configureSessionFactory() throws HibernateException {
 
-        //конфигурационный файл
-       // File file = new File("src/main/resources/hibernate.cfg.xml");
+        //сonfig file init
         Configuration configuration = new Configuration()
                 .addResource("Image.hibernate.xml")
                 .addResource("User.hibernate.xml")
@@ -28,7 +26,6 @@ public class HibernateUtil {
         return configuration.buildSessionFactory(serviceRegistry);
     }
 
-     //Получить фабрику сессий
     public static SessionFactory getSessionFactory() {
         return sessionFactory;
     }

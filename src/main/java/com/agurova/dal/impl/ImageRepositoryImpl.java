@@ -7,51 +7,50 @@ import com.agurova.models.User;
 import org.hibernate.Hibernate;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 import java.util.List;
 
 public class ImageRepositoryImpl implements ImageRepository {
 
-    public void addImage(Image image) {
+    public void save(Image image) {
         Session session = HibernateUtil.getSessionFactory().openSession();
-        session.beginTransaction();
-        session.save(image);
+        Transaction transaction = session.beginTransaction();
+        session.saveOrUpdate(image);
+
         session.flush();
-        session.getTransaction().commit();
+        transaction.commit();
+        session.close();
     }
 
     public Image findByID(Long id) {
         Session session = HibernateUtil.getSessionFactory().openSession();
-        Image resultImage = (Image) session.load(Image.class, id);
-        Hibernate.initialize(resultImage.getLikedUsersList());
+        Image resultImage = session.get(Image.class, id);
+        session.close();
         return resultImage;
     }
 
-
-    public void deleteImage(Long id) {
+    public void delete(Long id) {
         Session session = HibernateUtil.getSessionFactory().openSession();
-        try{
-            session.beginTransaction();
-            Image image = (Image) session.get(Image.class, id);
+        try {
+            Transaction transaction = session.beginTransaction();
+            Image image = session.get(Image.class, id);
             session.delete(image);
-            session.getTransaction().commit();
-        }
-        catch (HibernateException e){
+            transaction.commit();
+            session.close();
+        } catch (HibernateException e) {
             e.printStackTrace();
             session.getTransaction().rollback();
+            session.close();
         }
     }
 
     public List<Image> getAll() {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        try{
+        try (Session session = HibernateUtil.getSessionFactory().openSession();
+        ) {
             List<Image> result = session.createQuery("from Image").list();
-            for (Image user : result) {
-                Hibernate.initialize(user.getLikedUsersList());
-            }
             return result;
-        }
-        catch (HibernateException e){
+        } catch (HibernateException e) {
             e.printStackTrace();
             return null;
         }

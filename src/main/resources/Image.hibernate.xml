@@ -2,19 +2,17 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
-<hibernate-mapping >
+<hibernate-mapping>
     <class name="com.agurova.models.Image" table="image">
-        <id name="id" column="id" type="long">
+        <id name="imageId" type="long" column="id">
             <generator class="identity" />
         </id>
 
-        <property name="name" column="name"/>
-        <property name="adress" column="address"/>
-
-       <bag name="likedUsersList" table="favorite_image" cascade="all">
-            <key column="id"></key>
-            <many-to-many column="user_id" class="com.agurova.models.User"/>
-        </bag>
+        <property name="unsplashId" column="unsplashId"/>
+        <property name="width" column="width"/>
+        <property name="height" column="height"/>
+        <property name="color" column="color"/>
+        <property name="address" column="address"/>
 
     </class>
 </hibernate-mapping>

@@ -9,7 +9,7 @@ public interface ImageRepository {
 
     Image findByID(Long id);
 
-    void deleteImage(Long id);
+    void delete(Long id);
 
-    void addImage(Image image);
+    void save(Image image);
 }

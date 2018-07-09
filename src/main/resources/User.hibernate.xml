@@ -4,17 +4,17 @@
 
 <hibernate-mapping>
     <class name="com.agurova.models.User" table="customers">
-        <id name="id" type="long" column="id">
+        <id name="userId" type="long" column="id">
             <generator class="identity" />
         </id>
         <property name="name" column="name" type="string"/>
         <property name="login" column="login" type="string"/>
         <property name="password" column="password" type="string"/>
 
-        <bag name="favoriteImagesList" table="favorite_image" cascade="all">
-            <key column="id"/>
+        <set name="images" table="favorite_image" lazy="false" cascade="save-update">
+            <key column="user_id" not-null="true"/>
             <many-to-many column="image_id" class="com.agurova.models.Image"/>
-        </bag>
+        </set>
 
     </class>
 </hibernate-mapping>

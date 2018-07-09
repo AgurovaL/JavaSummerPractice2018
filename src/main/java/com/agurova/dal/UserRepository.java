@@ -9,7 +9,7 @@ public interface UserRepository {
 
     User findByID(Long id);
 
-    void addUser(User user);
+    void save(User user);
 
-    void deleteUser(Long id);
+    void delete(Long id);
 }

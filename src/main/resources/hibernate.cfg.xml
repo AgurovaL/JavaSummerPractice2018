@@ -7,27 +7,6 @@
 
     <session-factory>
 
-        <!-- Настройки подключения к БД -->
-        <!--<property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>-->
-
-        <!--<property name="connection.url"> jdbc:sqlserver://LIDIA-PC/SQLEXPRESS:1433;databaseName=ImagesApp;</property>-->
-
-        <!--<property name="connection.username">Lidia-PC/Lidia</property>-->
-        <!--<property name="connection.password"></property>-->
-
-        <!--<property name="connection.pool_size">1</property>-->
-
-        <!--&lt;!&ndash; SQL диалект &ndash;&gt;-->
-        <!--<property name="dialect">org.hibernate.dialect.SQLServerDialect</property>-->
-
-        <!--&lt;!&ndash; Включить автоматическое управление контекстом сессии &ndash;&gt;-->
-        <!--<property name="current_session_context_class">thread</property>-->
-
-        <!--&lt;!&ndash; Отключение кеша второго уровня  &ndash;&gt;-->
-        <!--<property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>-->
-
-        <!--&lt;!&ndash; Вывод в консоль SQL-запросов &ndash;&gt;-->
-        <!--<property name="show_sql">true</property>-->
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
 
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
@@ -39,7 +18,7 @@
         <property name="hibernate.connection.password">root</property>
 
         <property name="hbm2ddl.auto">create</property>
-        <!-- Подключение объектов сущностей -->
+
         <mapping resource="User.hibernate.xml"/>
         <mapping resource="Image.hibernate.xml"/>
 
