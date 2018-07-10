@@ -8,23 +8,25 @@ import com.agurova.services.StockImagesService;
 import com.agurova.services.impl.UnsplashStockImagesService;
 import org.apache.log4j.Logger;
 
+import java.util.List;
+
 public class Test {
     private static final Logger log = Logger.getLogger(Test.class);
     private static StockImagesService stockImagesService = new UnsplashStockImagesService();
 
     public static void main(String[] args) {
 
-        ImageRepository imageRepository = new ImageRepositoryImpl();
-        UserRepository userRepository = new UserRepositoryImpl();
+//        ImageRepository imageRepository = new ImageRepositoryImpl();
+//        UserRepository userRepository = new UserRepositoryImpl();
+//
+//        User user = new User();
+//        user.setName("alex");
+//        user.setLogin("ermolaxe");
+//        user.setPassword("123");
+//
+//        List<Image> images = stockImagesService.getImages();
 
-        User user = new User();
-        user.setName("alex");
-        user.setLogin("ermolaxe");
-        user.setPassword("123");
-
-        Image image = stockImagesService.getRandomImage();
-
-        user.addImage(image);
-        userRepository.save(user);
+//        user.addImage(image);
+//        userRepository.save(user);
     }
 }

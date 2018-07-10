@@ -23,6 +23,6 @@ public class Image {
     private String height;
     @JsonProperty("color")
     private String color;
-    @JsonProperty("html")
+    @JsonProperty("links/html")
     private String address;
 }

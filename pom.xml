@@ -20,6 +20,7 @@
         <log.version>1.2.12</log.version>
         <postgresql.version>9.1-901.jdbc4</postgresql.version>
         <jackson.version>2.9.6</jackson.version>
+        <jackson-mapper>1.9.13</jackson-mapper>
     </properties>
 
     <dependencies>
@@ -84,11 +85,6 @@
             <version>${postgresql.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.googlecode.json-simple</groupId>
-            <artifactId>json-simple</artifactId>
-            <version>1.1</version>
-        </dependency>
-        <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
             <version>${jackson.version}</version>
@@ -96,7 +92,7 @@
         <dependency>
             <groupId>org.codehaus.jackson</groupId>
             <artifactId>jackson-mapper-asl</artifactId>
-            <version>1.9.13</version>
+            <version>${jackson-mapper}</version>
         </dependency>
 
     </dependencies>
