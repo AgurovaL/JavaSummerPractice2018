@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns = "http://www.springframework.org/schema/beans"
        xmlns:context = "http://www.springframework.org/schema/context"
        xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
@@ -14,21 +15,7 @@
     </bean>
 
     <bean id="imageController" class="com.agurova.controllers.ImageController">
-        <property name="service" ref="mainService"/>
     </bean>
 
-    <bean id="mainService" class="com.agurova.services.impl.ImageMainServiceImpl">
-        <property name="imageRepositoryService" ref="imageRepositoryService"/>
-        <property name="stockImagesService" ref="stockImagesService"/>
-    </bean>
 
-    <bean id="imageRepositoryService" class="com.agurova.services.impl.ImageRepositoryServiceImpl">
-        <property name="imageRepository" ref="imageRepository"/>
-    </bean>
-
-    <bean id="stockImagesService" class="com.agurova.services.impl.UnsplashStockImageServiceImpl">
-    </bean>
-
-    <bean id="imageRepository" class="com.agurova.dal.impl.ImageRepositoryImpl">
-    </bean>
 </beans>

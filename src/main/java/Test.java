@@ -4,8 +4,10 @@ import com.agurova.dal.impl.ImageRepositoryImpl;
 import com.agurova.dal.impl.UserRepositoryImpl;
 import com.agurova.models.Image;
 import com.agurova.models.User;
-import com.agurova.services.StockImagesService;
-import com.agurova.services.impl.UnsplashStockImageServiceImpl;
+import com.agurova.services.external.StockImagesService;
+import com.agurova.services.external.impl.UnsplashStockImageServiceImpl;
+import com.agurova.services.helper.ImageMainService;
+import com.agurova.services.helper.impl.ImageMainServiceImpl;
 import org.apache.log4j.Logger;
 
 import java.util.List;
@@ -15,22 +17,7 @@ public class Test {
     private static StockImagesService stockImagesService = new UnsplashStockImageServiceImpl();
 
     public static void main(String[] args) {
-
-//      ImageRepository imageRepository = new ImageRepositoryImpl();
-//        UserRepository userRepository = new UserRepositoryImpl();
-//
-//        User user = new User();
-//        user.setName("alex");
-//        user.setLogin("ermolaxe");
-//        user.setPassword("123");
-//
-//        List<Image> images = stockImagesService.getAllImages();
-//        for (Image image : images) {
-//            imageRepository.save(image);
-//        }
-//
-//        imageRepository.deleteAll();
-       // user.addImage(images.get(0));
-       // userRepository.save(user);
+        StockImagesService sis = new UnsplashStockImageServiceImpl();
+        Image image = sis.getRandomImage();
     }
 }

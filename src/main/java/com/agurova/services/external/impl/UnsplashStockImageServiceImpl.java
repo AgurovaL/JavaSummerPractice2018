@@ -1,7 +1,8 @@
-package com.agurova.services.impl;
+package com.agurova.services.external.impl;
 
 import com.agurova.models.Image;
-import com.agurova.services.StockImagesService;
+import com.agurova.services.external.StockImagesService;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.log4j.Logger;
 
@@ -25,8 +26,7 @@ public class UnsplashStockImageServiceImpl implements StockImagesService {
     private static int imagesNumber;
 
     static {
-        try (FileInputStream inputReader = new FileInputStream(PROPERTIES_PATH);
-        ) {
+        try (FileInputStream inputReader = new FileInputStream(PROPERTIES_PATH);) {
             Properties properties = new Properties();
             properties.load(inputReader);
 
@@ -60,10 +60,8 @@ public class UnsplashStockImageServiceImpl implements StockImagesService {
 
             int code = connection.getResponseCode();
             if (code == HttpURLConnection.HTTP_OK) {
-                try (
-                        BufferedReader reader = new BufferedReader(
-                                new InputStreamReader(connection.getInputStream(), "utf8"));
-                ) {
+                try (BufferedReader reader = new BufferedReader(
+                        new InputStreamReader(connection.getInputStream(), "utf8"));) {
                     ObjectMapper mapper = new ObjectMapper();
                     // get Json list from reader and convert to Images list
                     resultList = Arrays.asList(mapper.readValue(reader, Image[].class));
@@ -101,11 +99,22 @@ public class UnsplashStockImageServiceImpl implements StockImagesService {
                         jsonInString += line;
                     }
 
-                    System.out.println(jsonInString);
-                    ObjectMapper mapper = new ObjectMapper();
-                    // Convert JSON string to Object
-                    resultImage = mapper.readValue(jsonInString, Image.class);
-                    System.out.println(resultImage);
+                    LOG.info(jsonInString);
+
+                    JsonNode productNode = new ObjectMapper().readTree(jsonInString);
+
+                    resultImage = new Image();
+                    resultImage.setUnsplashId(productNode.get("id").textValue());
+                    resultImage.setWidth(productNode.get("width").textValue());
+                    resultImage.setHeight(productNode.get("height").textValue());
+                    resultImage.setColor(productNode.get("color").textValue());
+                    resultImage.setAddress(productNode.get("urls")
+                            .get("small").textValue());
+
+//                    ObjectMapper mapper = new ObjectMapper();
+//                    // Convert JSON string to Object
+//                    resultImage = mapper.readValue(jsonInString, Image.class);
+                    LOG.info(resultImage);
 
                 } catch (IOException e) {
                     LOG.error("Error reading json string", e);

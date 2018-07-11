@@ -1,4 +1,4 @@
-package com.agurova.services;
+package com.agurova.services.helper;
 
 import com.agurova.models.Image;
 

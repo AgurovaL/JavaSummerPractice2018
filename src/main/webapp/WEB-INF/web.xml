@@ -6,14 +6,16 @@
 
     <display-name>Spring MVC Application</display-name>
 
+
     <servlet>
-        <servlet-name>Images</servlet-name>
+        <servlet-name>Application</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>Images</servlet-name>
+        <servlet-name>Application</servlet-name>
+        <url-pattern>/images/extra</url-pattern>
         <url-pattern>/images/all</url-pattern>
         <url-pattern>/images/favoriteImages</url-pattern>
         <url-pattern>/images/categorizedImages</url-pattern>

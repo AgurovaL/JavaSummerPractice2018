@@ -60,8 +60,7 @@ public class ImageRepositoryImpl implements ImageRepository {
     }
 
     public List<Image> getAll() {
-        try (Session session = HibernateUtil.getSessionFactory().openSession();
-        ) {
+        try (Session session = HibernateUtil.getSessionFactory().openSession();) {
             List<Image> result = session.createQuery("from Image").list();
             return result;
         } catch (HibernateException e) {

@@ -1,6 +1,7 @@
 package com.agurova.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.ToString;
@@ -24,12 +25,7 @@ public class Image {
     private String height;
     @JsonProperty("color")
     private String color;
-    @JsonProperty("html")
+    @JsonProperty("small")
     private String address;
 
-    private class Address{
-        private String self;
-        private String html;
-        private String download;
-    }
 }

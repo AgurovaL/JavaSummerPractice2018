@@ -1,7 +1,10 @@
 package com.agurova.controllers;
 
 import com.agurova.models.Image;
-import com.agurova.services.ImageMainService;
+import com.agurova.services.external.StockImagesService;
+import com.agurova.services.external.impl.UnsplashStockImageServiceImpl;
+import com.agurova.services.helper.ImageMainService;
+import com.agurova.services.helper.impl.ImageMainServiceImpl;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,9 +18,15 @@ import java.util.List;
 public class ImageController {
     private static final Logger LOG = Logger.getLogger(ImageController.class);
 
-    //бины
-    @Autowired
-    private ImageMainService service; //= new ImageMainServiceImpl();
+    private ImageMainService service = new ImageMainServiceImpl();
+
+    @GetMapping("/extra")
+    public String extra(ModelMap model){
+        StockImagesService sis = new UnsplashStockImageServiceImpl();
+        Image image = sis.getRandomImage();
+        model.addAttribute(image.getAddress());
+        return "extra";
+    }
 
     @GetMapping("/all")
     public String imagesGet(ModelMap model) {
@@ -30,7 +39,8 @@ public class ImageController {
 
     @GetMapping("/favorite")
     public String favoriteImagesGet(ModelMap model) {
-        List<String> images = service.getFavoriteImages();
+        service.updateImages();
+       // List<String> images = service.getFavoriteImages();
         return "favoriteImages";
     }
 
