@@ -2,13 +2,8 @@ package com.agurova.services.impl;
 
 import com.agurova.models.Image;
 import com.agurova.services.StockImagesService;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.json.JsonReadContext;
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import org.apache.log4j.Logger;
-import org.springframework.data.repository.init.Jackson2ResourceReader;
 
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -18,24 +13,45 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
 
-public class UnsplashStockImagesService implements StockImagesService {
-    private static final Logger log = Logger.getLogger(UnsplashStockImagesService.class);
+public class UnsplashStockImageServiceImpl implements StockImagesService {
+    private static final Logger LOG = Logger.getLogger(UnsplashStockImageServiceImpl.class);
 
-    final static String randomImageURL = "https://api.unsplash.com/photos/random/?client_id=";
-    final static String listImagesURL = "https://api.unsplash.com/photos/?";
+    private static final String PROPERTIES_PATH = "src/main/resources/unsplash.properties";
+    private static final String RANDOM_IMAGE_URL = "https://api.unsplash.com/photos/random/?client_id=";
+    private static final String LIST_IMAGES_URL = "https://api.unsplash.com/photos/?";
 
-    private String accessKey;
-    private String secretKey;
-    private int imagesNumber;
+    private static String accessKey;
+    private static String secretKey;
+    private static int imagesNumber;
 
+    static {
+        try (FileInputStream inputReader = new FileInputStream(PROPERTIES_PATH);
+        ) {
+            Properties properties = new Properties();
+            properties.load(inputReader);
+
+            accessKey = properties.getProperty("accessKey");
+            secretKey = properties.getProperty("secretKey");
+            imagesNumber = Integer.parseInt(properties.getProperty("perPage"));
+
+            LOG.info("AccessKey: " + accessKey);
+            LOG.info("SecretKey: " + secretKey);
+            LOG.info("imagesNumber: " + imagesNumber);
+
+        } catch (IOException e) {
+            LOG.error("File " + PROPERTIES_PATH + " doesn't exist!");
+        }
+    }
+
+    public List<Image> getImagesByTag(String tag) {
+        return new ArrayList<>();
+    }
 
     public List<Image> getAllImages() {
-        List<Image> resultList = new ArrayList<Image>();
-        //get the keys from unsplash.properties
-        loadProperties();
+        List<Image> resultList = new ArrayList<>();
 
         try {
-            String urlString = listImagesURL + "per_page=" + imagesNumber + ";client_id=" + accessKey;
+            String urlString = LIST_IMAGES_URL + "per_page=" + imagesNumber + ";client_id=" + accessKey;
             URL url = new URL(urlString);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
@@ -52,38 +68,21 @@ public class UnsplashStockImagesService implements StockImagesService {
                     // get Json list from reader and convert to Images list
                     resultList = Arrays.asList(mapper.readValue(reader, Image[].class));
                 } catch (IOException e) {
-                    log.error("IOException", e);
+                    LOG.error("IOException", e);
                 }
             }
             connection.disconnect();
         } catch (Exception e) {
-            log.error("IOException", e);
+            LOG.error("IOException", e);
         }
         return resultList;
     }
 
-    public List<String> postAllImages(List<Image> images) {
-        List<String> resultStrings = new ArrayList<>();
-
-        ObjectMapper mapper = new ObjectMapper();
-        try{
-            for (Image image: images){
-                //adding to result as Json string
-                resultStrings.add(mapper.writeValueAsString(image));
-            }
-        }catch (JsonProcessingException e){
-            log.error("Converting to Json string error", e);
-        }
-        return resultStrings;
-    }
-
     public Image getRandomImage() {
         Image resultImage = new Image();
-        //get the keys from unsplash.properties
-        loadProperties();
 
         try {
-            String urlString = randomImageURL + accessKey;
+            String urlString = RANDOM_IMAGE_URL + accessKey;
             URL url = new URL(urlString);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
@@ -96,7 +95,7 @@ public class UnsplashStockImagesService implements StockImagesService {
                         BufferedReader reader = new BufferedReader(
                                 new InputStreamReader(connection.getInputStream(), "utf8"));
                 ) {
-                    String line = null;
+                    String line;
                     String jsonInString = "";
                     while ((line = reader.readLine()) != null) {
                         jsonInString += line;
@@ -109,36 +108,15 @@ public class UnsplashStockImagesService implements StockImagesService {
                     System.out.println(resultImage);
 
                 } catch (IOException e) {
-                    log.error("IOException", e);
+                    LOG.error("Error reading json string", e);
                 }
             }
 
             connection.disconnect();
 
         } catch (Exception e) {
-            log.error("IOException", e);
+            LOG.error("Connection error", e);
         }
         return resultImage;
-    }
-
-    private void loadProperties() {
-        String path = "src/main/resources/unsplash.properties";
-
-        try (FileInputStream inputReader = new FileInputStream(path);
-        ) {
-            Properties properties = new Properties();
-            properties.load(inputReader);
-
-            this.accessKey = properties.getProperty("AccessKey");
-            this.secretKey = properties.getProperty("SecretKey");
-            this.imagesNumber = Integer.parseInt(properties.getProperty("per_page"));
-
-            log.info("AccessKey: " + this.accessKey);
-            log.info("SecretKey: " + this.secretKey);
-            log.info("imagesNumber: " + this.imagesNumber);
-
-        } catch (IOException e) {
-            log.error("File " + path + " doesn't exist!");
-        }
     }
 }

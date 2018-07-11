@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.ToString;
 
 import javax.persistence.Entity;
+import javax.xml.soap.SAAJResult;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,6 +24,12 @@ public class Image {
     private String height;
     @JsonProperty("color")
     private String color;
-    @JsonProperty("links/html")
+    @JsonProperty("html")
     private String address;
+
+    private class Address{
+        private String self;
+        private String html;
+        private String download;
+    }
 }

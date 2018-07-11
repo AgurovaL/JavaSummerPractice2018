@@ -1,10 +1,10 @@
-package com.agurova.dal;
+package com.agurova.services;
 
 import com.agurova.models.Image;
 
 import java.util.List;
 
-public interface ImageRepository {
+public interface ImageRepositoryService {
     List<Image> getAll();
 
     Image findByID(Long id);

@@ -45,6 +45,20 @@ public class ImageRepositoryImpl implements ImageRepository {
         }
     }
 
+    public void deleteAll() {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        try {
+            Transaction transaction = session.beginTransaction();
+            session.createQuery("DELETE FROM Image").executeUpdate();
+            transaction.commit();
+            session.close();
+        } catch (HibernateException e) {
+            e.printStackTrace();
+            session.getTransaction().rollback();
+            session.close();
+        }
+    }
+
     public List<Image> getAll() {
         try (Session session = HibernateUtil.getSessionFactory().openSession();
         ) {

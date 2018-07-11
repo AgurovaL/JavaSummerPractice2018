@@ -4,3 +4,256 @@
 2018-07-10 15:33:53 INFO  ImageController:31 - 0
 2018-07-10 15:35:38 ERROR UnsplashStockImagesService:125 - File src/main/resources/unsplash.properties doesn't exist!
 2018-07-10 15:35:38 INFO  ImageController:31 - 0
+2018-07-10 17:50:40 INFO  UnsplashStockImagesService:136 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
+2018-07-10 17:50:41 INFO  UnsplashStockImagesService:137 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
+2018-07-10 17:50:41 INFO  UnsplashStockImagesService:138 - imagesNumber: 20
+2018-07-10 17:51:04 INFO  Version:46 - HHH000412: Hibernate Core {5.3.1.Final}
+2018-07-10 17:51:04 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-07-10 17:51:09 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-07-10 17:51:17 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-07-10 17:51:17 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.0.3.Final}
+2018-07-10 17:51:18 WARN  pooling:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-07-10 17:51:18 INFO  pooling:129 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/postgres]
+2018-07-10 17:51:18 INFO  pooling:138 - HHH10001001: Connection properties: {user=postgres, password=****}
+2018-07-10 17:51:18 INFO  pooling:143 - HHH10001003: Autocommit mode: false
+2018-07-10 17:51:18 INFO  DriverManagerConnectionProviderImpl:281 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-07-10 17:51:19 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2018-07-10 17:51:19 INFO  LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-07-10 17:51:19 INFO  BasicTypeRegistry:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@5f577419
+2018-07-10 17:51:25 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5412bfea] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-07-10 17:51:25 WARN  ExceptionHandlerLoggedImpl:27 - GenerationTarget encountered exception accepting command : Error executing DDL "alter table favorite_image drop constraint FK8lgiofm23qgy7of421fcy8vl" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table favorite_image drop constraint FK8lgiofm23qgy7of421fcy8vl" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:375)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:359)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:331)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:230)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:154)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:126)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:144)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:72)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:310)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:467)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:708)
+	at com.agurova.hibernate.HibernateUtil.configureSessionFactory(HibernateUtil.java:26)
+	at com.agurova.hibernate.HibernateUtil.<clinit>(HibernateUtil.java:12)
+	at com.agurova.dal.impl.ImageRepositoryImpl.save(ImageRepositoryImpl.java:17)
+	at Test.main(Test.java:29)
+Caused by: org.postgresql.util.PSQLException: ОШИБКА: отношение "favorite_image" не существует
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2102)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1835)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:257)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:500)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:374)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:366)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 16 more
+2018-07-10 17:51:25 WARN  ExceptionHandlerLoggedImpl:27 - GenerationTarget encountered exception accepting command : Error executing DDL "alter table favorite_image drop constraint FKe5ganw1ls5tg93oxl7unndxgc" via JDBC Statement
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table favorite_image drop constraint FKe5ganw1ls5tg93oxl7unndxgc" via JDBC Statement
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:375)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:359)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:331)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:230)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:154)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:126)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:144)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:72)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:310)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:467)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:708)
+	at com.agurova.hibernate.HibernateUtil.configureSessionFactory(HibernateUtil.java:26)
+	at com.agurova.hibernate.HibernateUtil.<clinit>(HibernateUtil.java:12)
+	at com.agurova.dal.impl.ImageRepositoryImpl.save(ImageRepositoryImpl.java:17)
+	at Test.main(Test.java:29)
+Caused by: org.postgresql.util.PSQLException: ОШИБКА: отношение "favorite_image" не существует
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2102)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1835)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:257)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:500)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:374)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:366)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	... 16 more
+2018-07-10 17:51:25 WARN  SqlExceptionHelper:217 - SQL Warning Code: 0, SQLState: 00000
+2018-07-10 17:51:25 WARN  SqlExceptionHelper:218 - таблица "customers" не существует, пропускается
+2018-07-10 17:51:25 WARN  SqlExceptionHelper:217 - SQL Warning Code: 0, SQLState: 00000
+2018-07-10 17:51:25 WARN  SqlExceptionHelper:218 - таблица "favorite_image" не существует, пропускается
+2018-07-10 17:51:25 WARN  SqlExceptionHelper:217 - SQL Warning Code: 0, SQLState: 00000
+2018-07-10 17:51:25 WARN  SqlExceptionHelper:218 - таблица "image" не существует, пропускается
+2018-07-10 17:51:25 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@382c90c2] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-07-10 17:51:26 INFO  SchemaCreatorImpl:489 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@760245e1'
+2018-07-10 18:17:23 INFO  Version:46 - HHH000412: Hibernate Core {5.3.1.Final}
+2018-07-10 18:17:23 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-07-10 18:17:27 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-07-10 18:17:33 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-07-10 18:17:34 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.0.3.Final}
+2018-07-10 18:17:36 WARN  pooling:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-07-10 18:17:36 INFO  pooling:129 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/postgres]
+2018-07-10 18:17:36 INFO  pooling:138 - HHH10001001: Connection properties: {user=postgres, password=****}
+2018-07-10 18:17:36 INFO  pooling:143 - HHH10001003: Autocommit mode: false
+2018-07-10 18:17:36 INFO  DriverManagerConnectionProviderImpl:281 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-07-10 18:17:36 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2018-07-10 18:17:37 INFO  LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-07-10 18:17:37 INFO  BasicTypeRegistry:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@2f6e28bc
+2018-07-10 18:17:41 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3cbcd8f3] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-07-10 18:17:42 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7cab1508] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-07-10 18:17:42 INFO  SchemaCreatorImpl:489 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@6d171ce0'
+2018-07-10 18:17:43 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-07-10 18:18:23 INFO  UnsplashStockImagesService:136 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
+2018-07-10 18:18:23 INFO  UnsplashStockImagesService:137 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
+2018-07-10 18:18:23 INFO  UnsplashStockImagesService:138 - imagesNumber: 20
+2018-07-10 18:18:26 INFO  Version:46 - HHH000412: Hibernate Core {5.3.1.Final}
+2018-07-10 18:18:26 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-07-10 18:18:26 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-07-10 18:18:27 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-07-10 18:18:28 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.0.3.Final}
+2018-07-10 18:18:28 WARN  pooling:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-07-10 18:18:28 INFO  pooling:129 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/postgres]
+2018-07-10 18:18:28 INFO  pooling:138 - HHH10001001: Connection properties: {user=postgres, password=****}
+2018-07-10 18:18:28 INFO  pooling:143 - HHH10001003: Autocommit mode: false
+2018-07-10 18:18:28 INFO  DriverManagerConnectionProviderImpl:281 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-07-10 18:18:28 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2018-07-10 18:18:28 INFO  LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-07-10 18:18:28 INFO  BasicTypeRegistry:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@7e8e8651
+2018-07-10 18:18:29 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4cdb8504] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-07-10 18:18:29 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@20de05e5] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-07-10 18:18:29 INFO  SchemaCreatorImpl:489 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@382c90c2'
+2018-07-10 18:29:58 INFO  UnsplashStockImagesService:136 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
+2018-07-10 18:29:58 INFO  UnsplashStockImagesService:137 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
+2018-07-10 18:29:58 INFO  UnsplashStockImagesService:138 - imagesNumber: 100
+2018-07-11 12:25:57 INFO  UnsplashStockImageServiceImpl:119 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
+2018-07-11 12:25:57 INFO  UnsplashStockImageServiceImpl:120 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
+2018-07-11 12:25:57 INFO  UnsplashStockImageServiceImpl:121 - imagesNumber: 100
+2018-07-11 12:26:06 INFO  Version:46 - HHH000412: Hibernate Core {5.3.1.Final}
+2018-07-11 12:26:06 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-07-11 12:26:08 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-07-11 12:26:10 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-07-11 12:26:11 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.0.3.Final}
+2018-07-11 12:26:12 WARN  pooling:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-07-11 12:26:12 INFO  pooling:129 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/postgres]
+2018-07-11 12:26:12 INFO  pooling:138 - HHH10001001: Connection properties: {user=postgres, password=****}
+2018-07-11 12:26:12 INFO  pooling:143 - HHH10001003: Autocommit mode: false
+2018-07-11 12:26:12 INFO  DriverManagerConnectionProviderImpl:281 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-07-11 12:26:12 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2018-07-11 12:26:13 INFO  LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-07-11 12:26:13 INFO  BasicTypeRegistry:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@7e8e8651
+2018-07-11 12:26:18 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4cdb8504] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-07-11 12:26:19 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@20de05e5] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-07-11 12:26:20 INFO  SchemaCreatorImpl:489 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@382c90c2'
+2018-07-11 12:27:24 INFO  Version:46 - HHH000412: Hibernate Core {5.3.1.Final}
+2018-07-11 12:27:24 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-07-11 12:27:25 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-07-11 12:27:27 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-07-11 12:27:27 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.0.3.Final}
+2018-07-11 12:27:27 WARN  pooling:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-07-11 12:27:27 INFO  pooling:129 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/postgres]
+2018-07-11 12:27:27 INFO  pooling:138 - HHH10001001: Connection properties: {user=postgres, password=****}
+2018-07-11 12:27:27 INFO  pooling:143 - HHH10001003: Autocommit mode: false
+2018-07-11 12:27:27 INFO  DriverManagerConnectionProviderImpl:281 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-07-11 12:27:27 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2018-07-11 12:27:27 INFO  LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-07-11 12:27:27 INFO  BasicTypeRegistry:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@5c18016b
+2018-07-11 12:27:28 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@159a48a6] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-07-11 12:27:29 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@719843e5] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-07-11 12:27:30 INFO  SchemaCreatorImpl:489 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@3104f7bd'
+2018-07-11 12:27:30 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-07-11 12:28:09 INFO  UnsplashStockImageServiceImpl:119 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
+2018-07-11 12:28:09 INFO  UnsplashStockImageServiceImpl:120 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
+2018-07-11 12:28:09 INFO  UnsplashStockImageServiceImpl:121 - imagesNumber: 100
+2018-07-11 12:28:11 INFO  Version:46 - HHH000412: Hibernate Core {5.3.1.Final}
+2018-07-11 12:28:11 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-07-11 12:28:11 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-07-11 12:28:12 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-07-11 12:28:12 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.0.3.Final}
+2018-07-11 12:28:12 WARN  pooling:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-07-11 12:28:12 INFO  pooling:129 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/postgres]
+2018-07-11 12:28:12 INFO  pooling:138 - HHH10001001: Connection properties: {user=postgres, password=****}
+2018-07-11 12:28:12 INFO  pooling:143 - HHH10001003: Autocommit mode: false
+2018-07-11 12:28:12 INFO  DriverManagerConnectionProviderImpl:281 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-07-11 12:28:13 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2018-07-11 12:28:13 INFO  LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-07-11 12:28:13 INFO  BasicTypeRegistry:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@7e8e8651
+2018-07-11 12:28:14 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4cdb8504] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-07-11 12:28:14 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@20de05e5] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-07-11 12:28:14 INFO  SchemaCreatorImpl:489 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@382c90c2'
+2018-07-11 12:28:14 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-07-11 12:30:28 INFO  UnsplashStockImageServiceImpl:119 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
+2018-07-11 12:30:28 INFO  UnsplashStockImageServiceImpl:120 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
+2018-07-11 12:30:28 INFO  UnsplashStockImageServiceImpl:121 - imagesNumber: 100
+2018-07-11 12:30:30 INFO  Version:46 - HHH000412: Hibernate Core {5.3.1.Final}
+2018-07-11 12:30:30 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-07-11 12:30:30 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-07-11 12:30:32 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-07-11 12:30:32 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.0.3.Final}
+2018-07-11 12:30:32 WARN  pooling:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-07-11 12:30:32 INFO  pooling:129 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/postgres]
+2018-07-11 12:30:32 INFO  pooling:138 - HHH10001001: Connection properties: {user=postgres, password=****}
+2018-07-11 12:30:32 INFO  pooling:143 - HHH10001003: Autocommit mode: false
+2018-07-11 12:30:32 INFO  DriverManagerConnectionProviderImpl:281 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-07-11 12:30:32 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2018-07-11 12:30:32 INFO  LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-07-11 12:30:32 INFO  BasicTypeRegistry:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@7e8e8651
+2018-07-11 12:30:34 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4cdb8504] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-07-11 12:30:34 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@20de05e5] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-07-11 12:30:34 INFO  SchemaCreatorImpl:489 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@382c90c2'
+2018-07-11 12:30:34 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-07-11 12:30:34 ERROR ErrorTracker:62 - line 1:8: expecting IDENT, found '*'
+2018-07-11 12:30:34 ERROR ErrorTracker:57 - line 1:8: expecting IDENT, found '*'
+line 1:8: expecting IDENT, found '*'
+	at antlr.Parser.match(Parser.java:211)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.identifier(HqlBaseParser.java:1480)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.path(HqlBaseParser.java:577)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.optionalFromTokenFromClause(HqlBaseParser.java:409)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.deleteStatement(HqlBaseParser.java:282)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.statement(HqlBaseParser.java:187)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.parse(QueryTranslatorImpl.java:289)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:188)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:143)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:120)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:81)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:153)
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:595)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:704)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:103)
+	at com.agurova.dal.impl.ImageRepositoryImpl.deleteAll(ImageRepositoryImpl.java:52)
+	at Test.main(Test.java:32)
+2018-07-11 12:30:34 ERROR ErrorTracker:62 - line 1:10: unexpected token: FROM
+2018-07-11 12:30:34 ERROR ErrorTracker:57 - line 1:10: unexpected token: FROM
+line 1:10: unexpected token: FROM
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.optionalFromTokenFromClause(HqlBaseParser.java:428)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.deleteStatement(HqlBaseParser.java:282)
+	at org.hibernate.hql.internal.antlr.HqlBaseParser.statement(HqlBaseParser.java:187)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.parse(QueryTranslatorImpl.java:289)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:188)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:143)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:120)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:81)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:153)
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:595)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:704)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:103)
+	at com.agurova.dal.impl.ImageRepositoryImpl.deleteAll(ImageRepositoryImpl.java:52)
+	at Test.main(Test.java:32)
+2018-07-11 12:31:38 INFO  UnsplashStockImageServiceImpl:119 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
+2018-07-11 12:31:38 INFO  UnsplashStockImageServiceImpl:120 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
+2018-07-11 12:31:38 INFO  UnsplashStockImageServiceImpl:121 - imagesNumber: 100
+2018-07-11 12:31:40 INFO  Version:46 - HHH000412: Hibernate Core {5.3.1.Final}
+2018-07-11 12:31:40 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-07-11 12:31:40 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-07-11 12:31:42 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-07-11 12:31:42 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.0.3.Final}
+2018-07-11 12:31:42 WARN  pooling:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-07-11 12:31:42 INFO  pooling:129 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/postgres]
+2018-07-11 12:31:42 INFO  pooling:138 - HHH10001001: Connection properties: {user=postgres, password=****}
+2018-07-11 12:31:42 INFO  pooling:143 - HHH10001003: Autocommit mode: false
+2018-07-11 12:31:42 INFO  DriverManagerConnectionProviderImpl:281 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-07-11 12:31:42 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2018-07-11 12:31:42 INFO  LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-07-11 12:31:42 INFO  BasicTypeRegistry:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@7e8e8651
+2018-07-11 12:31:43 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4cdb8504] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-07-11 12:31:43 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@20de05e5] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-07-11 12:31:43 INFO  SchemaCreatorImpl:489 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@382c90c2'
+2018-07-11 12:31:44 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
