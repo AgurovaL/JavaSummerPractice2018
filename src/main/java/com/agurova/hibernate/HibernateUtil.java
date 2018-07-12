@@ -16,6 +16,7 @@ public class HibernateUtil {
 
         //ñonfig file init
         Configuration configuration = new Configuration()
+                .addResource("hibernate.cfg.xml")
                 .addResource("Image.hibernate.xml")
                 .addResource("User.hibernate.xml")
                 .configure();

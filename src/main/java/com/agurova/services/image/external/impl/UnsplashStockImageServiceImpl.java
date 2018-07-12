@@ -1,7 +1,7 @@
-package com.agurova.services.external.impl;
+package com.agurova.services.image.external.impl;
 
 import com.agurova.models.Image;
-import com.agurova.services.external.StockImagesService;
+import com.agurova.services.image.external.StockImagesService;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.log4j.Logger;
@@ -17,7 +17,7 @@ import java.util.Properties;
 public class UnsplashStockImageServiceImpl implements StockImagesService {
     private static final Logger LOG = Logger.getLogger(UnsplashStockImageServiceImpl.class);
 
-    private static final String PROPERTIES_PATH = "src/main/resources/unsplash.properties";
+    private static final String PROPERTIES_PATH = "/unsplash.properties";
     private static final String RANDOM_IMAGE_URL = "https://api.unsplash.com/photos/random/?client_id=";
     private static final String LIST_IMAGES_URL = "https://api.unsplash.com/photos/?";
 
@@ -26,9 +26,10 @@ public class UnsplashStockImageServiceImpl implements StockImagesService {
     private static int imagesNumber;
 
     static {
-        try (FileInputStream inputReader = new FileInputStream(PROPERTIES_PATH);) {
+        try (InputStream inputStream =
+                     UnsplashStockImageServiceImpl.class.getResourceAsStream(PROPERTIES_PATH);) {
             Properties properties = new Properties();
-            properties.load(inputReader);
+            properties.load(inputStream);
 
             accessKey = properties.getProperty("accessKey");
             secretKey = properties.getProperty("secretKey");
@@ -44,7 +45,44 @@ public class UnsplashStockImageServiceImpl implements StockImagesService {
     }
 
     public List<Image> getImagesByTag(String tag) {
-        return new ArrayList<>();
+        List<Image> resultList = new ArrayList<>();
+        HttpURLConnection connection = null;
+        try {
+            String urlString = LIST_IMAGES_URL + "query=" + tag + "&client_id=" + accessKey;
+            URL url = new URL(urlString);
+            connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("GET");
+
+            connection.setUseCaches(false);
+
+            int code = connection.getResponseCode();
+            if (code == HttpURLConnection.HTTP_OK) {
+                try (BufferedReader reader = new BufferedReader(
+                        new InputStreamReader(connection.getInputStream(), "utf8"));) {
+
+                    ObjectMapper mapper = new ObjectMapper();
+                    List<JsonNode> jsonNodes = Arrays.asList((mapper.readValue(reader, JsonNode[].class)));
+
+                    for (JsonNode jsonNode : jsonNodes) {
+                        Image resultImage = new Image();
+                        resultImage.setUnsplashId(jsonNode.get("id").textValue());
+                        resultImage.setWidth(jsonNode.get("width").textValue());
+                        resultImage.setHeight(jsonNode.get("height").textValue());
+                        resultImage.setColor(jsonNode.get("color").textValue());
+                        resultImage.setAddress(jsonNode.get("urls")
+                                .get("small").textValue());
+                        resultList.add(resultImage);
+                    }
+                } catch (IOException e) {
+                    LOG.error("IOException", e);
+                }
+            }
+            connection.disconnect();
+        } catch (Exception e) {
+            connection.disconnect();
+            LOG.error("IOException", e);
+        }
+        return resultList;
     }
 
     public List<Image> getAllImages() {
@@ -62,9 +100,20 @@ public class UnsplashStockImageServiceImpl implements StockImagesService {
             if (code == HttpURLConnection.HTTP_OK) {
                 try (BufferedReader reader = new BufferedReader(
                         new InputStreamReader(connection.getInputStream(), "utf8"));) {
+
                     ObjectMapper mapper = new ObjectMapper();
-                    // get Json list from reader and convert to Images list
-                    resultList = Arrays.asList(mapper.readValue(reader, Image[].class));
+                    List<JsonNode> jsonNodes = Arrays.asList((mapper.readValue(reader, JsonNode[].class)));
+
+                    for (JsonNode jsonNode : jsonNodes) {
+                        Image resultImage = new Image();
+                        resultImage.setUnsplashId(jsonNode.get("id").textValue());
+                        resultImage.setWidth(jsonNode.get("width").textValue());
+                        resultImage.setHeight(jsonNode.get("height").textValue());
+                        resultImage.setColor(jsonNode.get("color").textValue());
+                        resultImage.setAddress(jsonNode.get("urls")
+                                .get("small").textValue());
+                        resultList.add(resultImage);
+                    }
                 } catch (IOException e) {
                     LOG.error("IOException", e);
                 }
@@ -101,19 +150,16 @@ public class UnsplashStockImageServiceImpl implements StockImagesService {
 
                     LOG.info(jsonInString);
 
-                    JsonNode productNode = new ObjectMapper().readTree(jsonInString);
+                    JsonNode jsonNode = new ObjectMapper().readTree(jsonInString);
 
                     resultImage = new Image();
-                    resultImage.setUnsplashId(productNode.get("id").textValue());
-                    resultImage.setWidth(productNode.get("width").textValue());
-                    resultImage.setHeight(productNode.get("height").textValue());
-                    resultImage.setColor(productNode.get("color").textValue());
-                    resultImage.setAddress(productNode.get("urls")
+                    resultImage.setUnsplashId(jsonNode.get("id").textValue());
+                    resultImage.setWidth(jsonNode.get("width").textValue());
+                    resultImage.setHeight(jsonNode.get("height").textValue());
+                    resultImage.setColor(jsonNode.get("color").textValue());
+                    resultImage.setAddress(jsonNode.get("urls")
                             .get("small").textValue());
 
-//                    ObjectMapper mapper = new ObjectMapper();
-//                    // Convert JSON string to Object
-//                    resultImage = mapper.readValue(jsonInString, Image.class);
                     LOG.info(resultImage);
 
                 } catch (IOException e) {
@@ -122,7 +168,6 @@ public class UnsplashStockImageServiceImpl implements StockImagesService {
             }
 
             connection.disconnect();
-
         } catch (Exception e) {
             LOG.error("Connection error", e);
         }

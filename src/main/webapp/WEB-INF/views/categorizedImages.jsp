@@ -9,5 +9,9 @@
        <p><input type="search" name="q" placeholder="search a category">
        <input type="submit" value="Search"></p>
       </form>
+      <h2>Results</h2>
+          <c:forEach var="item" items="${images}" >
+                 <img src=${item.getAddress()} alt="image"/>
+          </c:forEach>
 </body>
 </html>

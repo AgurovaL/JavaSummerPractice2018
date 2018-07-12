@@ -15,7 +15,29 @@
     </bean>
 
     <bean id="imageController" class="com.agurova.controllers.ImageController">
+        <property name="service" ref="mainService"/>
     </bean>
 
+    <bean id="mainService" class="com.agurova.services.image.helper.impl.ImageMainServiceImpl">
+        <property name="imageRepositoryService" ref="imageRepositoryService"/>
+        <property name="stockImagesService" ref="stockImagesService"/>
+    </bean>
+
+    <bean id="imageRepositoryService" class="com.agurova.services.image.dal.impl.ImageRepositoryServiceImpl">
+        <property name="imageRepository" ref="imageRepository"/>
+    </bean>
+
+    <bean id="stockImagesService" class="com.agurova.services.image.external.impl.UnsplashStockImageServiceImpl">
+    </bean>
+
+    <bean id="userRepository" class ="com.agurova.dal.impl.UserRepositoryImpl">
+    </bean>
+
+    <bean id="imageRepository" class ="com.agurova.dal.impl.ImageRepositoryImpl">
+    </bean>
+
+    <bean id="logger" class="org.apache.log4j.Logger" factory-method="getLogger">
+        <constructor-arg type="java.lang.String" value="my.Logger" />
+    </bean>
 
 </beans>

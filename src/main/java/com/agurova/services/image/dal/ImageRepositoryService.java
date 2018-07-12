@@ -1,4 +1,4 @@
-package com.agurova.services.dal;
+package com.agurova.services.image.dal;
 
 import com.agurova.models.Image;
 

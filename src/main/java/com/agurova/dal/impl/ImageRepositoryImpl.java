@@ -3,8 +3,6 @@ package com.agurova.dal.impl;
 import com.agurova.dal.ImageRepository;
 import com.agurova.hibernate.HibernateUtil;
 import com.agurova.models.Image;
-import com.agurova.models.User;
-import org.hibernate.Hibernate;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -12,12 +10,10 @@ import org.hibernate.Transaction;
 import java.util.List;
 
 public class ImageRepositoryImpl implements ImageRepository {
-
     public void save(Image image) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         session.saveOrUpdate(image);
-
         session.flush();
         transaction.commit();
         session.close();

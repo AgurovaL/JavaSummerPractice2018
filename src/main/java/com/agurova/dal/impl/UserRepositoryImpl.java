@@ -16,7 +16,6 @@ public class UserRepositoryImpl implements UserRepository {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         session.saveOrUpdate(user);
-
         session.flush();
         transaction.commit();
         session.close();

@@ -1,8 +1,9 @@
-package com.agurova.services.helper;
+package com.agurova.services.image.helper;
 
 import com.agurova.models.Image;
-
+import com.agurova.models.User;
 import java.util.List;
+import java.util.Set;
 
 public interface ImageMainService {
     List<Image> getAllImages();
@@ -11,6 +12,6 @@ public interface ImageMainService {
 
     List<Image> getImagesByTag(String tag);
 
-    List<String> getFavoriteImages();
+    Set<Image> getFavoriteImages(User user);
 
 }

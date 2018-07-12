@@ -17,8 +17,8 @@
         <servlet-name>Application</servlet-name>
         <url-pattern>/images/extra</url-pattern>
         <url-pattern>/images/all</url-pattern>
-        <url-pattern>/images/favoriteImages</url-pattern>
-        <url-pattern>/images/categorizedImages</url-pattern>
+        <url-pattern>/images/favorite</url-pattern>
+        <url-pattern>/images/categories</url-pattern>
     </servlet-mapping>
 
 </web-app>

@@ -1,4 +1,4 @@
-package com.agurova.services.external;
+package com.agurova.services.image.external;
 
 import com.agurova.models.Image;
 
