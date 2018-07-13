@@ -22,7 +22,9 @@
         <jackson.version>2.9.6</jackson.version>
         <jackson-mapper>1.9.13</jackson-mapper>
         <quartz.scheduling.version>2.2.1</quartz.scheduling.version>
+        <security.version>5.0.6.RELEASE</security.version>
     </properties>
+
 
     <dependencies>
         <dependency>
@@ -99,6 +101,21 @@
             <groupId>org.quartz-scheduler</groupId>
             <artifactId>quartz</artifactId>
             <version>${quartz.scheduling.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>${security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>${security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>${security.version}</version>
         </dependency>
     </dependencies>
 

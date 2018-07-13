@@ -2,10 +2,12 @@ package com.agurova.services.image.helper.impl;
 
 import com.agurova.models.Image;
 import com.agurova.models.User;
+import com.agurova.services.image.dal.impl.ImageRepositoryServiceImpl;
 import com.agurova.services.image.helper.ImageMainService;
 import com.agurova.services.image.dal.ImageRepositoryService;
 import com.agurova.services.image.external.StockImagesService;
 import com.agurova.services.image.external.impl.UnsplashStockImageServiceImpl;
+import lombok.Data;
 import org.apache.log4j.Logger;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -14,11 +16,12 @@ import java.util.List;
 import java.util.Set;
 
 @EnableScheduling
+@Data
 public class ImageMainServiceImpl implements ImageMainService {
     private static final Logger LOG = Logger.getLogger(UnsplashStockImageServiceImpl.class);
 
-    private ImageRepositoryService imageRepositoryService;
-    private StockImagesService stockImagesService;
+    private ImageRepositoryServiceImpl imageRepositoryService;
+    private UnsplashStockImageServiceImpl stockImagesService;
 
     public List<Image> getAllImages() {
         return imageRepositoryService.getAll();
@@ -29,8 +32,7 @@ public class ImageMainServiceImpl implements ImageMainService {
     }
 
     public Set<Image> getFavoriteImages(User user) {
-        Set<Image> favoriteImages = user.getImages();
-        return favoriteImages;
+        return user.getImages();
     }
 
     //second, minute, hour, day of month, month, day(s) of week

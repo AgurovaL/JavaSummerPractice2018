@@ -1,13 +1,15 @@
 package com.agurova.services.user.impl;
 
-import com.agurova.dal.UserRepository;
+import com.agurova.dal.impl.UserRepositoryImpl;
 import com.agurova.models.User;
 import com.agurova.services.user.UserRepositoryService;
+import lombok.Data;
 
 import java.util.List;
 
+@Data
 public class UserRepositoryServiceImpl implements UserRepositoryService {
-    private UserRepository userRepository;
+    private UserRepositoryImpl userRepository;
 
     public List<User> getAll() {
         return userRepository.getAll();

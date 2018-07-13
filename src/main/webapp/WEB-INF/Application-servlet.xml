@@ -14,8 +14,12 @@
         <property name = "suffix" value = ".jsp" />
     </bean>
 
+    <bean id="appController" class="com.agurova.controllers.AppController">
+    </bean>
+
     <bean id="imageController" class="com.agurova.controllers.ImageController">
         <property name="service" ref="mainService"/>
+        <property name="userRepositoryService" ref="userRepositoryService"/>
     </bean>
 
     <bean id="mainService" class="com.agurova.services.image.helper.impl.ImageMainServiceImpl">
@@ -25,6 +29,10 @@
 
     <bean id="imageRepositoryService" class="com.agurova.services.image.dal.impl.ImageRepositoryServiceImpl">
         <property name="imageRepository" ref="imageRepository"/>
+    </bean>
+
+    <bean id="userRepositoryService" class="com.agurova.services.user.impl.UserRepositoryServiceImpl">
+        <property name="userRepository" ref="userRepository"/>
     </bean>
 
     <bean id="stockImagesService" class="com.agurova.services.image.external.impl.UnsplashStockImageServiceImpl">
@@ -40,4 +48,7 @@
         <constructor-arg type="java.lang.String" value="my.Logger" />
     </bean>
 
+    <bean id="springSecurityFilterChain" class="org.springframework.security.web.FilterChainProxy">
+
+    </bean>
 </beans>

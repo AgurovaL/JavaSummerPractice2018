@@ -79,19 +79,22 @@ public class UnsplashStockImageServiceImpl implements StockImagesService {
             }
             connection.disconnect();
         } catch (Exception e) {
-            connection.disconnect();
             LOG.error("IOException", e);
+        } finally {
+            if (connection != null) {
+                connection.disconnect();
+            }
         }
         return resultList;
     }
 
     public List<Image> getAllImages() {
         List<Image> resultList = new ArrayList<>();
-
+        HttpURLConnection connection = null;
         try {
             String urlString = LIST_IMAGES_URL + "per_page=" + imagesNumber + ";client_id=" + accessKey;
             URL url = new URL(urlString);
-            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
 
             connection.setUseCaches(false);
@@ -121,6 +124,8 @@ public class UnsplashStockImageServiceImpl implements StockImagesService {
             connection.disconnect();
         } catch (Exception e) {
             LOG.error("IOException", e);
+        } finally {
+            connection.disconnect();
         }
         return resultList;
     }

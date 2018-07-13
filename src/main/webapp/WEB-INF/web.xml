@@ -6,7 +6,6 @@
 
     <display-name>Spring MVC Application</display-name>
 
-
     <servlet>
         <servlet-name>Application</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -15,10 +14,26 @@
 
     <servlet-mapping>
         <servlet-name>Application</servlet-name>
-        <url-pattern>/images/extra</url-pattern>
         <url-pattern>/images/all</url-pattern>
+        <url-pattern>/images/extra</url-pattern>
         <url-pattern>/images/favorite</url-pattern>
         <url-pattern>/images/categories</url-pattern>
+        <url-pattern>/users/*</url-pattern>
+        <url-pattern>/welcome</url-pattern>
+        <url-pattern>/admin</url-pattern>
     </servlet-mapping>
 
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/security.cfg.xml</param-value>
+    </context-param>
+
+    <filter>
+        <filter-name>springSecurityFilterChain</filter-name>
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>springSecurityFilterChain</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 </web-app>
