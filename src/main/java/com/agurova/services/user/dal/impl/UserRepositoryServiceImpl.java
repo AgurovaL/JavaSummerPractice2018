@@ -1,8 +1,8 @@
-package com.agurova.services.user.impl;
+package com.agurova.services.user.dal.impl;
 
 import com.agurova.dal.impl.UserRepositoryImpl;
 import com.agurova.models.User;
-import com.agurova.services.user.UserRepositoryService;
+import com.agurova.services.user.dal.UserRepositoryService;
 import lombok.Data;
 
 import java.util.List;

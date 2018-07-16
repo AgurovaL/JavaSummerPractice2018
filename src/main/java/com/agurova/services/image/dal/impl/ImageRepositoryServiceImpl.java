@@ -1,6 +1,5 @@
 package com.agurova.services.image.dal.impl;
 
-import com.agurova.dal.ImageRepository;
 import com.agurova.dal.impl.ImageRepositoryImpl;
 import com.agurova.models.Image;
 import com.agurova.services.image.dal.ImageRepositoryService;

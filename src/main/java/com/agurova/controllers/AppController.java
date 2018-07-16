@@ -1,31 +1,37 @@
 package com.agurova.controllers;
 
+import com.agurova.models.User;
+import com.agurova.services.user.dal.impl.UserRepositoryServiceImpl;
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class AppController {
-    @RequestMapping(value = { "/", "/welcome**" }, method = RequestMethod.GET)
-    public ModelAndView welcomePage() {
-
-        ModelAndView model = new ModelAndView();
-        model.addObject("title", "Spring Security Hello World");
-        model.addObject("message", "This is welcome page!");
-        model.setViewName("welcome");
-        return model;
+    private static final Logger LOG = Logger.getLogger(AppController.class);
+    @GetMapping("/welcome")
+    public String welcomePageGet(Model model) {
+        model.addAttribute("message", "This is welcome page!");
+        return "welcome";
     }
 
-    @RequestMapping(value = "/admin**", method = RequestMethod.GET)
-    public ModelAndView adminPage() {
+    @GetMapping("/registration")
+    public String registrationGet(Model model) {
+        model.addAttribute("client", new User());
+        return "registration";
+    }
 
-        ModelAndView model = new ModelAndView();
-        model.addObject("title", "Spring Security Hello World");
-        model.addObject("message", "This is protected page!");
-        model.setViewName("admin");
+    @PostMapping("/registration")
+    public String registrationPost(@ModelAttribute User user) {
+        new UserRepositoryServiceImpl().save(user);
+        return "redirect:/user-page/"; //+ user.getId();
+    }
 
-        return model;
+    @GetMapping("/admin")
+    public String adminPageGet(Model model) {
+        model.addAttribute("message", "This is protected page!");
+        return "admin";
 
     }
 }

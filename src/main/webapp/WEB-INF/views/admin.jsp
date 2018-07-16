@@ -1,8 +1,10 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page session="true"%>
 <html>
+<head>
+    <title>Admin page</title>
+</head>
 <body>
-	<h1>Title : ${title}</h1>
 	<h1>Message : ${message}</h1>
 
 	<c:if test="${pageContext.request.userPrincipal.name != null}">

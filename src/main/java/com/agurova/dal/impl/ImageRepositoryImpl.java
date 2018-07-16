@@ -3,6 +3,7 @@ package com.agurova.dal.impl;
 import com.agurova.dal.ImageRepository;
 import com.agurova.hibernate.HibernateUtil;
 import com.agurova.models.Image;
+import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -10,6 +11,8 @@ import org.hibernate.Transaction;
 import java.util.List;
 
 public class ImageRepositoryImpl implements ImageRepository {
+    protected static final Logger LOG = Logger.getLogger(ImageRepositoryImpl.class);
+
     public void save(Image image) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
@@ -60,6 +63,7 @@ public class ImageRepositoryImpl implements ImageRepository {
             List<Image> result = session.createQuery("from Image").list();
             return result;
         } catch (HibernateException e) {
+            LOG.error("HibernateException", e);
             e.printStackTrace();
             return null;
         }

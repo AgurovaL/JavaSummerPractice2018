@@ -4,8 +4,6 @@ import com.agurova.models.Image;
 import com.agurova.models.User;
 import com.agurova.services.image.dal.impl.ImageRepositoryServiceImpl;
 import com.agurova.services.image.helper.ImageMainService;
-import com.agurova.services.image.dal.ImageRepositoryService;
-import com.agurova.services.image.external.StockImagesService;
 import com.agurova.services.image.external.impl.UnsplashStockImageServiceImpl;
 import lombok.Data;
 import org.apache.log4j.Logger;
@@ -18,7 +16,7 @@ import java.util.Set;
 @EnableScheduling
 @Data
 public class ImageMainServiceImpl implements ImageMainService {
-    private static final Logger LOG = Logger.getLogger(UnsplashStockImageServiceImpl.class);
+    private static final Logger LOG = Logger.getLogger(ImageMainServiceImpl.class);
 
     private ImageRepositoryServiceImpl imageRepositoryService;
     private UnsplashStockImageServiceImpl stockImagesService;

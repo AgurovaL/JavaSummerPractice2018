@@ -46,38 +46,52 @@ public class UnsplashStockImageServiceImpl implements StockImagesService {
 
     public List<Image> getImagesByTag(String tag) {
         List<Image> resultList = new ArrayList<>();
-        HttpURLConnection connection = null;
+        String urlString = LIST_IMAGES_URL + "query=" + tag + "&client_id=" + accessKey;
+        HttpURLConnection connection = createConnection(urlString);
+
         try {
-            String urlString = LIST_IMAGES_URL + "query=" + tag + "&client_id=" + accessKey;
-            URL url = new URL(urlString);
-            connection = (HttpURLConnection) url.openConnection();
-            connection.setRequestMethod("GET");
-
-            connection.setUseCaches(false);
-
             int code = connection.getResponseCode();
             if (code == HttpURLConnection.HTTP_OK) {
-                try (BufferedReader reader = new BufferedReader(
-                        new InputStreamReader(connection.getInputStream(), "utf8"));) {
+                BufferedReader reader = new BufferedReader(
+                        new InputStreamReader(connection.getInputStream(), "utf8"));
 
-                    ObjectMapper mapper = new ObjectMapper();
-                    List<JsonNode> jsonNodes = Arrays.asList((mapper.readValue(reader, JsonNode[].class)));
+                ObjectMapper mapper = new ObjectMapper();
+                List<JsonNode> jsonNodes = Arrays.asList((mapper.readValue(reader, JsonNode[].class)));
+                reader.close();
 
-                    for (JsonNode jsonNode : jsonNodes) {
-                        Image resultImage = new Image();
-                        resultImage.setUnsplashId(jsonNode.get("id").textValue());
-                        resultImage.setWidth(jsonNode.get("width").textValue());
-                        resultImage.setHeight(jsonNode.get("height").textValue());
-                        resultImage.setColor(jsonNode.get("color").textValue());
-                        resultImage.setAddress(jsonNode.get("urls")
-                                .get("small").textValue());
-                        resultList.add(resultImage);
-                    }
-                } catch (IOException e) {
-                    LOG.error("IOException", e);
-                }
+                resultList = createImagesListFromJsonNodeList(jsonNodes);
+            } else {
+                LOG.error("HttpURLConnection error!");
             }
-            connection.disconnect();
+        } catch (IOException e) {
+            LOG.error("IOException", e);
+        } finally {
+            if (connection != null) {
+                connection.disconnect();
+            }
+        }
+        return resultList;
+    }
+
+
+    public List<Image> getAllImages() {
+        List<Image> resultList = new ArrayList<>();
+        String urlString = LIST_IMAGES_URL + "per_page=" + imagesNumber + ";client_id=" + accessKey;
+        HttpURLConnection connection = createConnection(urlString);
+        try {
+            int code = connection.getResponseCode();
+            if (code == HttpURLConnection.HTTP_OK) {
+                BufferedReader reader = new BufferedReader(
+                        new InputStreamReader(connection.getInputStream(), "utf8"));
+
+                ObjectMapper mapper = new ObjectMapper();
+                List<JsonNode> jsonNodes = Arrays.asList((mapper.readValue(reader, JsonNode[].class)));
+                reader.close();
+
+                resultList = createImagesListFromJsonNodeList(jsonNodes);
+            } else {
+                LOG.error("HttpURLConnection error!");
+            }
         } catch (Exception e) {
             LOG.error("IOException", e);
         } finally {
@@ -88,94 +102,73 @@ public class UnsplashStockImageServiceImpl implements StockImagesService {
         return resultList;
     }
 
-    public List<Image> getAllImages() {
-        List<Image> resultList = new ArrayList<>();
+    private HttpURLConnection createConnection(String urlString) {
         HttpURLConnection connection = null;
         try {
-            String urlString = LIST_IMAGES_URL + "per_page=" + imagesNumber + ";client_id=" + accessKey;
             URL url = new URL(urlString);
             connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
-
             connection.setUseCaches(false);
+        } catch (IOException e) {
+            LOG.error("Check URL!");
+        }
+        return connection;
+    }
 
-            int code = connection.getResponseCode();
-            if (code == HttpURLConnection.HTTP_OK) {
-                try (BufferedReader reader = new BufferedReader(
-                        new InputStreamReader(connection.getInputStream(), "utf8"));) {
+    private List<Image> createImagesListFromJsonNodeList(List<JsonNode> jsonNodes) {
+        List<Image> resultList = new ArrayList<>();
+        if (jsonNodes != null) {
 
-                    ObjectMapper mapper = new ObjectMapper();
-                    List<JsonNode> jsonNodes = Arrays.asList((mapper.readValue(reader, JsonNode[].class)));
-
-                    for (JsonNode jsonNode : jsonNodes) {
-                        Image resultImage = new Image();
-                        resultImage.setUnsplashId(jsonNode.get("id").textValue());
-                        resultImage.setWidth(jsonNode.get("width").textValue());
-                        resultImage.setHeight(jsonNode.get("height").textValue());
-                        resultImage.setColor(jsonNode.get("color").textValue());
-                        resultImage.setAddress(jsonNode.get("urls")
-                                .get("small").textValue());
-                        resultList.add(resultImage);
-                    }
-                } catch (IOException e) {
-                    LOG.error("IOException", e);
-                }
+            for (JsonNode jsonNode : jsonNodes) {
+                Image resultImage = new Image();
+                resultImage.setUnsplashId(jsonNode.get("id").textValue());
+                resultImage.setWidth(jsonNode.get("width").textValue());
+                resultImage.setHeight(jsonNode.get("height").textValue());
+                resultImage.setColor(jsonNode.get("color").textValue());
+                resultImage.setAddress(jsonNode.get("urls")
+                        .get("small").textValue());
+                resultList.add(resultImage);
             }
-            connection.disconnect();
-        } catch (Exception e) {
-            LOG.error("IOException", e);
-        } finally {
-            connection.disconnect();
+        } else {
+            LOG.error("JsonNodes list is null!");
         }
         return resultList;
     }
 
     public Image getRandomImage() {
         Image resultImage = new Image();
+        String urlString = RANDOM_IMAGE_URL + accessKey;
+        HttpURLConnection connection = createConnection(urlString);
 
         try {
-            String urlString = RANDOM_IMAGE_URL + accessKey;
-            URL url = new URL(urlString);
-            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-            connection.setRequestMethod("GET");
-            connection.setUseCaches(false);
-
             int code = connection.getResponseCode();
-
             if (code == HttpURLConnection.HTTP_OK) {
-                try (
-                        BufferedReader reader = new BufferedReader(
-                                new InputStreamReader(connection.getInputStream(), "utf8"));
-                ) {
-                    String line;
-                    String jsonInString = "";
-                    while ((line = reader.readLine()) != null) {
-                        jsonInString += line;
-                    }
+                BufferedReader reader = new BufferedReader(
+                        new InputStreamReader(connection.getInputStream(), "utf8"));
 
-                    LOG.info(jsonInString);
-
-                    JsonNode jsonNode = new ObjectMapper().readTree(jsonInString);
-
-                    resultImage = new Image();
-                    resultImage.setUnsplashId(jsonNode.get("id").textValue());
-                    resultImage.setWidth(jsonNode.get("width").textValue());
-                    resultImage.setHeight(jsonNode.get("height").textValue());
-                    resultImage.setColor(jsonNode.get("color").textValue());
-                    resultImage.setAddress(jsonNode.get("urls")
-                            .get("small").textValue());
-
-                    LOG.info(resultImage);
-
-                } catch (IOException e) {
-                    LOG.error("Error reading json string", e);
+                String line;
+                String jsonInString = "";
+                while ((line = reader.readLine()) != null) {
+                    jsonInString += line;
                 }
-            }
+                reader.close();
 
-            connection.disconnect();
-        } catch (Exception e) {
-            LOG.error("Connection error", e);
+                JsonNode jsonNode = new ObjectMapper().readTree(jsonInString);
+                resultImage = new Image();
+                resultImage.setUnsplashId(jsonNode.get("id").textValue());
+                resultImage.setWidth(jsonNode.get("width").textValue());
+                resultImage.setHeight(jsonNode.get("height").textValue());
+                resultImage.setColor(jsonNode.get("color").textValue());
+                resultImage.setAddress(jsonNode.get("urls")
+                        .get("small").textValue());
+            }
+        } catch (IOException e) {
+            LOG.error("Error reading json string", e);
+        } finally {
+            if (connection != null) {
+                connection.disconnect();
+            }
+            return resultImage;
         }
-        return resultImage;
     }
 }

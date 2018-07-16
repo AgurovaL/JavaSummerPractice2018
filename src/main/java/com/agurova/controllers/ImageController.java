@@ -4,18 +4,14 @@ import com.agurova.models.Image;
 import com.agurova.models.User;
 import com.agurova.services.image.external.StockImagesService;
 import com.agurova.services.image.external.impl.UnsplashStockImageServiceImpl;
-import com.agurova.services.image.helper.ImageMainService;
 import com.agurova.services.image.helper.impl.ImageMainServiceImpl;
-import com.agurova.services.user.impl.UserRepositoryServiceImpl;
+import com.agurova.services.user.dal.impl.UserRepositoryServiceImpl;
 import lombok.Data;
 import org.apache.log4j.Logger;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @RequestMapping("/images")

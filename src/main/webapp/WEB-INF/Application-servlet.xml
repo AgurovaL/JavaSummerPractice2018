@@ -18,20 +18,28 @@
     </bean>
 
     <bean id="imageController" class="com.agurova.controllers.ImageController">
-        <property name="service" ref="mainService"/>
+        <property name="service" ref="mainImageService"/>
         <property name="userRepositoryService" ref="userRepositoryService"/>
     </bean>
 
-    <bean id="mainService" class="com.agurova.services.image.helper.impl.ImageMainServiceImpl">
+    <bean id="userController" class="com.agurova.controllers.UserController">
+        <property name="service" ref="mainUserService"/>
+    </bean>
+
+    <bean id="mainImageService" class="com.agurova.services.image.helper.impl.ImageMainServiceImpl">
         <property name="imageRepositoryService" ref="imageRepositoryService"/>
         <property name="stockImagesService" ref="stockImagesService"/>
+    </bean>
+
+    <bean id="mainUserService" class="com.agurova.services.user.helper.impl.UserMainServiceImpl">
+        <property name="userRepositoryService" ref="userRepositoryService"/>
     </bean>
 
     <bean id="imageRepositoryService" class="com.agurova.services.image.dal.impl.ImageRepositoryServiceImpl">
         <property name="imageRepository" ref="imageRepository"/>
     </bean>
 
-    <bean id="userRepositoryService" class="com.agurova.services.user.impl.UserRepositoryServiceImpl">
+    <bean id="userRepositoryService" class="com.agurova.services.user.dal.impl.UserRepositoryServiceImpl">
         <property name="userRepository" ref="userRepository"/>
     </bean>
 

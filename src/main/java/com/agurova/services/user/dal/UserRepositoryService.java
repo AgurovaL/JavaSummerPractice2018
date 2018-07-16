@@ -1,4 +1,4 @@
-package com.agurova.services.user;
+package com.agurova.services.user.dal;
 
 import com.agurova.models.User;
 

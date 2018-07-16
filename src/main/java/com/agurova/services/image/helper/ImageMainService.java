@@ -13,5 +13,4 @@ public interface ImageMainService {
     List<Image> getImagesByTag(String tag);
 
     Set<Image> getFavoriteImages(User user);
-
 }
