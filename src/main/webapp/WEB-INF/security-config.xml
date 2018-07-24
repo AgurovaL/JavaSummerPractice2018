@@ -13,11 +13,13 @@
         <intercept-url pattern="/admin" access="hasRole('ROLE_ADMIN')" />
         <intercept-url pattern="/images/allImages" access="hasRole('ROLE_USER')" />
 
-        <!--<form-login login-page="/login" default-target-url="/welcome"-->
-                    <!--authentication-failure-url="/login?error=true"/>-->
-        <!--<logout logout-url="/logout" logout-success-url="/welcome"/>-->
-        <!--<anonymous username="guest" granted-authority="ROLE_ANONYMOUS"/>-->
-        <!--<remember-me/>-->
+        <form-login
+                login-page="/login"
+                default-target-url="/welcome"
+                authentication-failure-url="/login?error=true"/>
+        <logout logout-url="/logout"
+                logout-success-url="/welcome"/>
+        <remember-me/>
     </http>
 
     <authentication-manager>
