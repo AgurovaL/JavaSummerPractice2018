@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface UserMainService {
     List<User> getAllUsers();
+
+    String authorize (String login, String password);
 }

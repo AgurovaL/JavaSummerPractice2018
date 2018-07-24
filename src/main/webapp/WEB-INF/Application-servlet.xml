@@ -56,7 +56,4 @@
         <constructor-arg type="java.lang.String" value="my.Logger" />
     </bean>
 
-    <bean id="springSecurityFilterChain" class="org.springframework.security.web.FilterChainProxy">
-
-    </bean>
 </beans>

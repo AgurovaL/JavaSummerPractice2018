@@ -10,6 +10,7 @@
         <property name="name" column="name" type="string"/>
         <property name="login" column="login" type="string"/>
         <property name="password" column="password" type="string"/>
+        <property name="role" column="role" type="string"/>
 
         <set name="images" table="favorite_image" lazy="false" cascade="save-update">
             <key column="user_id" not-null="true"/>

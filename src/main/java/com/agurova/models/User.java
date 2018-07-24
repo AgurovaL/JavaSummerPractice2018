@@ -16,6 +16,7 @@ public class User {
     private String name;
     private String login;
     private String password;
+    private String role;
     private Set<Image> images = new HashSet<>();
 
     public void addImage(Image image) {

@@ -25,6 +25,7 @@ public class UserRepositoryImpl implements UserRepository {
     public User findByID(Long id) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         User resultUser = session.get(User.class, id);
+
         session.close();
         Hibernate.initialize(resultUser.getImages());
         return resultUser;
