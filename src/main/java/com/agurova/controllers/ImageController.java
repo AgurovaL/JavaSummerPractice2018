@@ -9,9 +9,10 @@ import com.agurova.services.user.dal.impl.UserRepositoryServiceImpl;
 import lombok.Data;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @RequestMapping("/images")
@@ -23,7 +24,7 @@ public class ImageController {
     private UserRepositoryServiceImpl userRepositoryService;
 
     @GetMapping("/extra")
-    public String extra(ModelMap model) {
+    public String extra(Model model) {
         StockImagesService stockImageService = new UnsplashStockImageServiceImpl();
         Image image = stockImageService.getRandomImage();
         model.addAttribute("address", image.getAddress());
@@ -31,14 +32,14 @@ public class ImageController {
     }
 
     @GetMapping("/all")
-    public String imagesGet(ModelMap model) {
+    public String imagesGet(Model model) {
         service.updateImages();
         model.addAttribute("images", service.getAllImages());
         return "allImages";
     }
 
     @GetMapping("/favorite")
-    public String favoriteImagesGet(ModelMap model) {
+    public String favoriteImagesGet(Model model) {
 
         //favorite image adding example
         User user = new User();
@@ -55,15 +56,5 @@ public class ImageController {
         return "favoriteImages";
     }
 
-    @GetMapping("/categories")
-    public String categorizedImagesGet(ModelMap model, @ModelAttribute String tag) {
-        model.addAttribute("images", service.getImagesByTag(tag));
-        return "categorizedImages";
-    }
 
-//    @PostMapping("/categories")
-//    public String categorizedImagesPost(ModelMap model, @ModelAttribute String tag){
-//        model.addAttribute("images", service.getImagesByTag(tag));
-//        return "categorizedImages";
-//    }
 }

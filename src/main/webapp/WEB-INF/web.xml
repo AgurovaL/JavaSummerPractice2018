@@ -21,7 +21,9 @@
         <url-pattern>/images/all</url-pattern>
         <url-pattern>/images/extra</url-pattern>
         <url-pattern>/images/favorite</url-pattern>
-        <url-pattern>/images/categories</url-pattern>
+        <url-pattern>/images/search</url-pattern>
+        <url-pattern>/images/taggedImages</url-pattern>
+
         <url-pattern>/users/all</url-pattern>
         <url-pattern>/welcome</url-pattern>
         <url-pattern>/admin</url-pattern>

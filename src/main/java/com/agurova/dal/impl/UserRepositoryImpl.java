@@ -28,6 +28,7 @@ public class UserRepositoryImpl implements UserRepository {
 
         session.close();
         Hibernate.initialize(resultUser.getImages());
+        Hibernate.initialize(resultUser.getRoles());
         return resultUser;
     }
 
@@ -51,6 +52,7 @@ public class UserRepositoryImpl implements UserRepository {
         List<User> result = session.createQuery("from User").list();
         for (User user : result) {
             Hibernate.initialize(user.getImages());
+            Hibernate.initialize(user.getRoles());
         }
         session.close();
         return result;

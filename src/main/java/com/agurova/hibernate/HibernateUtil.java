@@ -19,6 +19,7 @@ public class HibernateUtil {
                 .addResource("hibernate.cfg.xml")
                 .addResource("Image.hibernate.xml")
                 .addResource("User.hibernate.xml")
+                .addResource("Role.hibernate.xml")
                 .configure();
 
         serviceRegistry = new StandardServiceRegistryBuilder()

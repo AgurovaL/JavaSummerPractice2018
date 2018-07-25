@@ -19,13 +19,13 @@ public class UserMainServiceImpl implements UserMainService {
     }
 
     public String authorize (String login, String password){
-        List<User> users = getAllUsers();
-        for (User user: users){
-            if (login.equals(user.getLogin()) && password.equals(user.getPassword())){
-                return user.getRole();
-            }
-        }
-        LOG.error("Log in error. No user with such login/password!");
+//        List<User> users = getAllUsers();
+//        for (User user: users){
+//            if (login.equals(user.getLogin()) && password.equals(user.getPassword())){
+//                return user.getRole();
+//            }
+//        }
+//        LOG.error("Log in error. No user with such login/password!");
         return null;
     }
 }

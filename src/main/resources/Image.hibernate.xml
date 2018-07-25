@@ -3,7 +3,7 @@
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <class name="com.agurova.models.Image" table="image">
+    <class name="com.agurova.models.Image" table="images">
         <id name="imageId" type="long" column="id">
             <generator class="identity" />
         </id>

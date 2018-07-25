@@ -16,10 +16,13 @@ public class User {
     private String name;
     private String login;
     private String password;
-    private String role;
+    private Set<Role> roles = new HashSet<>();
     private Set<Image> images = new HashSet<>();
 
     public void addImage(Image image) {
         images.add(image);
+    }
+    public void addRole(Role role) {
+        roles.add(role);
     }
 }
