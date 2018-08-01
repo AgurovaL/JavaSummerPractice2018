@@ -11,7 +11,11 @@
 
     <http auto-config="true">
         <intercept-url pattern="/admin" access="hasRole('ROLE_ADMIN')" />
-        <intercept-url pattern="/images/allImages" access="hasRole('ROLE_USER')" />
+        <intercept-url pattern="/users/all" access="hasRole('ROLE_ADMIN')" />
+
+        <intercept-url pattern="/user/*" access="hasRole('ROLE_USER')" />
+        <intercept-url pattern="/images/all" access="hasRole('ROLE_USER')" />
+        <intercept-url pattern="/images/favorite" access="hasRole('ROLE_USER')" />
 
         <form-login
                 login-page="/login"

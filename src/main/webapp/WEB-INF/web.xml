@@ -10,21 +10,17 @@
         <servlet-name>application</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
-        <!--<init-param>-->
-            <!--<param-name>securityConfigLocation</param-name>-->
-            <!--<param-value>classpath:security-config.xml</param-value>-->
-        <!--</init-param>-->
     </servlet>
 
     <servlet-mapping>
         <servlet-name>application</servlet-name>
         <url-pattern>/images/all</url-pattern>
-        <url-pattern>/images/extra</url-pattern>
         <url-pattern>/images/favorite</url-pattern>
         <url-pattern>/images/search</url-pattern>
         <url-pattern>/images/taggedImages</url-pattern>
 
         <url-pattern>/users/all</url-pattern>
+        <url-pattern>/user/*</url-pattern>
         <url-pattern>/welcome</url-pattern>
         <url-pattern>/admin</url-pattern>
         <url-pattern>/registration</url-pattern>

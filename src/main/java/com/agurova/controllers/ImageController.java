@@ -10,10 +10,7 @@ import lombok.Data;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 @RequestMapping("/images")
 @Controller
@@ -56,5 +53,18 @@ public class ImageController {
         return "favoriteImages";
     }
 
+    @GetMapping("/search")
+    public String searchGet(Model model) {
+        model.addAttribute("method", "get");
+        return "search";
+    }
+
+    @PostMapping("/search")
+    public String searchPost(Model model, @RequestParam("tag") String tag) {
+        model.addAttribute("method", "post");
+        model.addAttribute("tag", tag);
+        LOG.info("!!!!!" + tag);
+        return "redirect:/search";
+    }
 
 }

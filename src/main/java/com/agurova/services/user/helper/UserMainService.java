@@ -7,5 +7,7 @@ import java.util.List;
 public interface UserMainService {
     List<User> getAllUsers();
 
+    void save(User user);
+
     String authorize (String login, String password);
 }

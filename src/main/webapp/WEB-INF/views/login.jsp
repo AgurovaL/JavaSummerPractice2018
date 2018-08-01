@@ -1,5 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType = "text/html; charset = UTF-8" language="java" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <html>
 <head>
     <title>Login page</title>
@@ -14,24 +15,20 @@
    			<div class="msg">${msg}</div>
    		</c:if>
 
-   <form name='f' action="@{/login}" method='POST'>
-      <table>
-         <tr>
-            <td>User:</td>
-            <td><input type='text' name='login' value=''></td>
-         </tr>
-         <tr>
-            <td>Password:</td>
-            <td><input type='password' name='password' /></td>
-         </tr>
-         <tr>
-            <td><input name="submit" type="submit" value="Login" /></td>
-         </tr>
-      </table>
-  </form>
+ <form:form action="/login" modelAttribute="user" method="post">
+       <form:label path="login">Login</form:label>
+       <form:input type="text" path="login"/><br>
 
-  <form action="@{/registration}" method='GET'>
-     <button type="submit" class="button">Sign up</button>
-  </form>
+       <form:label path="password">Password</form:label>
+       <form:input type="password" path="password"/><br>
+
+       <input type="submit" value="Sign in"/><br>
+    </form:form>
+
+    <form:form action="/registration" method="post">
+        <input type="submit" value="Sign up" /><br>
+    </form:form>
+
+    <p><a href="/registration">Link to reg</a></p>
 </body>
 </html>

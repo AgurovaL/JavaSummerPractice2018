@@ -15,6 +15,7 @@
     </bean>
 
     <bean id="appController" class="com.agurova.controllers.AppController">
+        <property name="service" ref="mainUserService"/>
     </bean>
 
     <bean id="imageController" class="com.agurova.controllers.ImageController">

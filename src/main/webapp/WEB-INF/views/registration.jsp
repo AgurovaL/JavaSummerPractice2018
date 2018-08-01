@@ -1,16 +1,22 @@
 <%@page session="false"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <html>
 <head>
     <title>Registration page</title>
 </head>
 <body>
 	<h2>Registration page</h2>
-    <form action="#" th:action="@{/registration}" th:object="${user}" method="post">
-       <label>Login</label><input type="text" th:field="*{login}"/><br>
-       <label>Password</label><input type="password" th:field="*{password}"/><br>
-       <label>Name</label><input type="text" th:field="*{name}"/><br>
-       <input type="checkbox" th:field="*{admin}"/><label>Admin</label><br>
-       <button type="submit" class="button">Sign up</button>
-    </form>
+    <form:form action="/registration" modelAttribute="user" method="post">
+       <form:label path="login">Login</form:label>
+       <form:input type="text" path="login"/><br>
+
+       <form:label path="password">Password</form:label>
+       <form:input type="password" path="password"/><br>
+
+       <form:label path="name">Name</form:label>
+       <form:input type="text" path="name"/><br>
+
+        <input type="submit" value="Sign up"/><br>
+    </form:form>
 </body>
 </html>

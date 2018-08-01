@@ -1,15 +1,19 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page session="true"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <html>
 <head>
     <title>Admin page</title>
 </head>
 <body>
-	<h1>Message : ${message}</h1>
+	<h1>Hello admin!</h1>
 
-	<c:if test="${pageContext.request.userPrincipal.name != null}">
-	   <h2>Welcome : ${pageContext.request.userPrincipal.name}
-           | <a href="<c:url value="/j_spring_security_logout" />" > Logout</a></h2>
-	</c:if>
+    <form:form action="@{/users/all}" method="get">
+        <button type="submit">All users</button>
+    </form:form>
+
+    <form:form action="@{/logout}" method="post">
+        <input type="submit" value="Sign Out"/>
+    </form:form>
 </body>
 </html>
