@@ -42,6 +42,7 @@ public class AppController {
         return "login";
     }
 
+    //problem here
     @PostMapping("/login")
     public String loginPost(@ModelAttribute User user) {
         String role = service.authorize(user.getLogin(), user.getPassword());
@@ -60,6 +61,7 @@ public class AppController {
         return "registration";
     }
 
+    //problem here. Doesn't redirect to other page
     @PostMapping("/registration")
     public String registrationPost(@ModelAttribute User user) {
         service.save(user);
