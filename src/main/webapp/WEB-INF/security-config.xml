@@ -28,12 +28,11 @@
 
     <authentication-manager>
         <authentication-provider>
-            <user-service>
-                <user name="admin" password="admin" authorities="ROLE_ADMIN,ROLE_USER" />
-                <user name="user1" password="1111" authorities="ROLE_USER" />
-                <user name="user2" password="2222" authorities="ROLE_USER" />
-            </user-service>
+            <user-service id="userDetailsService" properties="/WEB-INF/users.properties"/>
+            <password-encoder ref="bcryptEncoder"/>
         </authentication-provider>
     </authentication-manager>
 
+    <beans:bean name="bcryptEncoder"
+                class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
 </beans:beans>

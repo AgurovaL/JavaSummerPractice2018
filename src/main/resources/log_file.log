@@ -1,248 +1,69 @@
-2018-07-30 15:43:36 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-07-30 15:43:36 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-07-30 15:43:36 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-07-30 15:44:23 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-07-30 15:44:23 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-07-30 15:44:23 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-07-30 15:47:32 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-07-30 15:47:32 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-07-30 15:47:32 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-07-31 16:50:11 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-07-31 16:50:11 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-07-31 16:50:11 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-07-31 16:51:21 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-07-31 16:51:21 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-07-31 16:51:21 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-07-31 16:52:12 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-07-31 16:52:12 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-07-31 16:52:12 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-07-31 16:52:43 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-07-31 16:52:43 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-07-31 16:52:43 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-07-31 16:55:01 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-07-31 16:55:01 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-07-31 16:55:01 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-07-31 16:55:54 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-07-31 16:55:54 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-07-31 16:55:54 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-07-31 16:56:37 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-07-31 16:56:37 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-07-31 16:56:37 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-07-31 16:57:23 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-07-31 16:57:23 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-07-31 16:57:23 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-07-31 17:03:51 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-07-31 17:03:51 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-07-31 17:03:51 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-07-31 17:04:35 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-07-31 17:04:35 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-07-31 17:04:35 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-07-31 17:07:22 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-07-31 17:07:22 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-07-31 17:07:22 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-07-31 17:08:07 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-07-31 17:08:07 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-07-31 17:08:07 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-07-31 17:08:19 INFO  Version:46 - HHH000412: Hibernate Core {5.3.1.Final}
-2018-07-31 17:08:19 INFO  Environment:213 - HHH000206: hibernate.properties not found
-2018-07-31 17:08:20 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
-2018-07-31 17:08:22 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
-2018-07-31 17:08:22 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
-2018-07-31 17:08:23 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.0.3.Final}
-2018-07-31 17:08:23 WARN  pooling:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-2018-07-31 17:08:23 INFO  pooling:129 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/postgres]
-2018-07-31 17:08:23 INFO  pooling:138 - HHH10001001: Connection properties: {user=postgres, password=****}
-2018-07-31 17:08:23 INFO  pooling:143 - HHH10001003: Autocommit mode: false
-2018-07-31 17:08:23 INFO  DriverManagerConnectionProviderImpl:281 - HHH000115: Hibernate connection pool size: 20 (min=1)
-2018-07-31 17:08:24 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2018-07-31 17:08:26 INFO  LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
-2018-07-31 17:08:26 INFO  BasicTypeRegistry:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@17ffe2d
-2018-07-31 17:08:29 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@72b8d27b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-07-31 17:08:31 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3172d62b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-07-31 17:08:32 INFO  SchemaCreatorImpl:489 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@3953a1'
-2018-07-31 17:08:32 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
-2018-07-31 17:08:35 INFO  ImageMainServiceImpl:44 - Images list is updated
-2018-07-31 17:09:28 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-07-31 17:09:28 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-07-31 17:09:28 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-07-31 17:12:54 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-07-31 17:12:54 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-07-31 17:12:54 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-07-31 17:14:13 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-07-31 17:14:13 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-07-31 17:14:13 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-07-31 17:16:33 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-07-31 17:16:33 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-07-31 17:16:33 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-07-31 17:17:43 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-07-31 17:17:43 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-07-31 17:17:43 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-07-31 17:18:12 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-07-31 17:18:12 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-07-31 17:18:12 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-07-31 17:18:55 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-07-31 17:18:55 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-07-31 17:18:55 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-07-31 17:24:17 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-07-31 17:24:17 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-07-31 17:24:17 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-07-31 17:26:33 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-07-31 17:26:33 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-07-31 17:26:33 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-07-31 17:28:37 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-07-31 17:28:37 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-07-31 17:28:37 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-08-01 13:45:46 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-08-01 13:45:46 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-08-01 13:45:46 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-08-01 13:56:36 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-08-01 13:56:36 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-08-01 13:56:36 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-08-01 14:18:51 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-08-01 14:18:51 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-08-01 14:18:51 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-08-01 14:20:20 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-08-01 14:20:20 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-08-01 14:20:20 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-08-01 14:21:26 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-08-01 14:21:26 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-08-01 14:21:26 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-08-01 14:23:06 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-08-01 14:23:06 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-08-01 14:23:06 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-08-01 14:24:42 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-08-01 14:24:42 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-08-01 14:24:42 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-08-01 14:30:43 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-08-01 14:30:43 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-08-01 14:30:43 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-08-01 14:32:39 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-08-01 14:32:39 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-08-01 14:32:39 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-08-01 14:37:10 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-08-01 14:37:10 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-08-01 14:37:10 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-08-01 14:37:23 INFO  Version:46 - HHH000412: Hibernate Core {5.3.1.Final}
-2018-08-01 14:37:23 INFO  Environment:213 - HHH000206: hibernate.properties not found
-2018-08-01 14:37:24 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
-2018-08-01 14:37:26 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
-2018-08-01 14:37:26 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
-2018-08-01 14:37:26 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.0.3.Final}
-2018-08-01 14:37:27 WARN  pooling:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-2018-08-01 14:37:27 INFO  pooling:129 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/postgres]
-2018-08-01 14:37:27 INFO  pooling:138 - HHH10001001: Connection properties: {user=postgres, password=****}
-2018-08-01 14:37:27 INFO  pooling:143 - HHH10001003: Autocommit mode: false
-2018-08-01 14:37:27 INFO  DriverManagerConnectionProviderImpl:281 - HHH000115: Hibernate connection pool size: 20 (min=1)
-2018-08-01 14:37:28 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2018-08-01 14:37:29 INFO  LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
-2018-08-01 14:37:29 INFO  BasicTypeRegistry:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@49e24179
-2018-08-01 14:37:33 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@10398d38] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-08-01 14:37:34 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@42ba18b5] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-08-01 14:37:35 INFO  SchemaCreatorImpl:489 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@6b6265f7'
-2018-08-01 15:25:05 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-08-01 15:25:05 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-08-01 15:25:05 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-08-01 15:25:33 INFO  Version:46 - HHH000412: Hibernate Core {5.3.1.Final}
-2018-08-01 15:25:33 INFO  Environment:213 - HHH000206: hibernate.properties not found
-2018-08-01 15:25:33 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
-2018-08-01 15:25:34 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
-2018-08-01 15:25:34 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
-2018-08-01 15:25:35 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.0.3.Final}
-2018-08-01 15:25:35 WARN  pooling:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-2018-08-01 15:25:35 INFO  pooling:129 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/postgres]
-2018-08-01 15:25:35 INFO  pooling:138 - HHH10001001: Connection properties: {user=postgres, password=****}
-2018-08-01 15:25:35 INFO  pooling:143 - HHH10001003: Autocommit mode: false
-2018-08-01 15:25:35 INFO  DriverManagerConnectionProviderImpl:281 - HHH000115: Hibernate connection pool size: 20 (min=1)
-2018-08-01 15:25:36 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2018-08-01 15:25:36 INFO  LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
-2018-08-01 15:25:36 INFO  BasicTypeRegistry:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@339146ef
-2018-08-01 15:25:39 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@620c0b77] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-08-01 15:25:39 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6169fa13] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-08-01 15:25:39 INFO  SchemaCreatorImpl:489 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@14203387'
-2018-08-01 15:27:19 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-08-01 15:27:19 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-08-01 15:27:19 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-08-01 15:27:30 INFO  Version:46 - HHH000412: Hibernate Core {5.3.1.Final}
-2018-08-01 15:27:30 INFO  Environment:213 - HHH000206: hibernate.properties not found
-2018-08-01 15:27:30 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
-2018-08-01 15:27:32 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
-2018-08-01 15:27:32 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
-2018-08-01 15:27:32 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.0.3.Final}
-2018-08-01 15:27:32 WARN  pooling:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-2018-08-01 15:27:32 INFO  pooling:129 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/postgres]
-2018-08-01 15:27:32 INFO  pooling:138 - HHH10001001: Connection properties: {user=postgres, password=****}
-2018-08-01 15:27:32 INFO  pooling:143 - HHH10001003: Autocommit mode: false
-2018-08-01 15:27:32 INFO  DriverManagerConnectionProviderImpl:281 - HHH000115: Hibernate connection pool size: 20 (min=1)
-2018-08-01 15:27:33 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2018-08-01 15:27:33 INFO  LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
-2018-08-01 15:27:33 INFO  BasicTypeRegistry:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@21b3c4c9
-2018-08-01 15:27:36 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@18908ffa] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-08-01 15:27:36 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@25f2ab6b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-08-01 15:27:36 INFO  SchemaCreatorImpl:489 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@3c165e57'
-2018-08-01 15:42:50 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-08-01 15:42:50 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-08-01 15:42:50 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-08-01 15:44:00 INFO  Version:46 - HHH000412: Hibernate Core {5.3.1.Final}
-2018-08-01 15:44:00 INFO  Environment:213 - HHH000206: hibernate.properties not found
-2018-08-01 15:44:00 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
-2018-08-01 15:44:02 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
-2018-08-01 15:44:02 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
-2018-08-01 15:44:02 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.0.3.Final}
-2018-08-01 15:44:02 WARN  pooling:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-2018-08-01 15:44:02 INFO  pooling:129 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/postgres]
-2018-08-01 15:44:02 INFO  pooling:138 - HHH10001001: Connection properties: {user=postgres, password=****}
-2018-08-01 15:44:02 INFO  pooling:143 - HHH10001003: Autocommit mode: false
-2018-08-01 15:44:02 INFO  DriverManagerConnectionProviderImpl:281 - HHH000115: Hibernate connection pool size: 20 (min=1)
-2018-08-01 15:44:03 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2018-08-01 15:44:03 INFO  LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
-2018-08-01 15:44:03 INFO  BasicTypeRegistry:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@32e99bc3
-2018-08-01 15:44:06 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@65cfa01c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-08-01 15:44:06 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2f2e97ab] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-08-01 15:44:06 INFO  SchemaCreatorImpl:489 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@6bd80e'
-2018-08-01 16:40:21 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-08-01 16:40:21 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-08-01 16:40:21 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-08-01 16:41:14 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-08-01 16:41:14 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-08-01 16:41:14 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-08-01 16:41:24 INFO  Version:46 - HHH000412: Hibernate Core {5.3.1.Final}
-2018-08-01 16:41:24 INFO  Environment:213 - HHH000206: hibernate.properties not found
-2018-08-01 16:41:24 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
-2018-08-01 16:41:26 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
-2018-08-01 16:41:26 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
-2018-08-01 16:41:26 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.0.3.Final}
-2018-08-01 16:41:27 WARN  pooling:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-2018-08-01 16:41:27 INFO  pooling:129 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/postgres]
-2018-08-01 16:41:27 INFO  pooling:138 - HHH10001001: Connection properties: {user=postgres, password=****}
-2018-08-01 16:41:27 INFO  pooling:143 - HHH10001003: Autocommit mode: false
-2018-08-01 16:41:27 INFO  DriverManagerConnectionProviderImpl:281 - HHH000115: Hibernate connection pool size: 20 (min=1)
-2018-08-01 16:41:27 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2018-08-01 16:41:27 INFO  LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
-2018-08-01 16:41:27 INFO  BasicTypeRegistry:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@5e2d2ca8
-2018-08-01 16:41:30 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@73a693a6] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-08-01 16:41:30 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@649a71c9] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-08-01 16:41:31 INFO  SchemaCreatorImpl:489 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7a7b4ed9'
-2018-08-01 16:41:32 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
-2018-08-01 16:41:36 INFO  ImageMainServiceImpl:44 - Images list is updated
-2018-08-01 16:42:44 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
-2018-08-01 16:42:44 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
-2018-08-01 16:42:44 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
-2018-08-01 16:42:49 INFO  Version:46 - HHH000412: Hibernate Core {5.3.1.Final}
-2018-08-01 16:42:49 INFO  Environment:213 - HHH000206: hibernate.properties not found
-2018-08-01 16:42:50 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
-2018-08-01 16:42:51 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
-2018-08-01 16:42:51 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
-2018-08-01 16:42:52 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.0.3.Final}
-2018-08-01 16:42:52 WARN  pooling:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
-2018-08-01 16:42:52 INFO  pooling:129 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/postgres]
-2018-08-01 16:42:52 INFO  pooling:138 - HHH10001001: Connection properties: {user=postgres, password=****}
-2018-08-01 16:42:52 INFO  pooling:143 - HHH10001003: Autocommit mode: false
-2018-08-01 16:42:52 INFO  DriverManagerConnectionProviderImpl:281 - HHH000115: Hibernate connection pool size: 20 (min=1)
-2018-08-01 16:42:52 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2018-08-01 16:42:53 INFO  LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
-2018-08-01 16:42:53 INFO  BasicTypeRegistry:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@7b380e7
-2018-08-01 16:42:55 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1012453e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-08-01 16:42:56 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6547e30] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-2018-08-01 16:42:56 INFO  SchemaCreatorImpl:489 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@43684438'
-2018-08-01 16:42:56 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
-2018-08-01 16:42:57 INFO  ImageMainServiceImpl:44 - Images list is updated
+2018-08-02 15:20:11 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
+2018-08-02 15:20:11 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
+2018-08-02 15:20:11 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
+2018-08-02 15:20:21 INFO  Version:46 - HHH000412: Hibernate Core {5.3.1.Final}
+2018-08-02 15:20:21 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-02 15:20:21 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-08-02 15:20:23 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-08-02 15:20:23 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-08-02 15:20:23 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.0.3.Final}
+2018-08-02 15:20:24 WARN  pooling:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-02 15:20:24 INFO  pooling:129 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/postgres]
+2018-08-02 15:20:24 INFO  pooling:138 - HHH10001001: Connection properties: {user=postgres, password=****}
+2018-08-02 15:20:24 INFO  pooling:143 - HHH10001003: Autocommit mode: false
+2018-08-02 15:20:24 INFO  DriverManagerConnectionProviderImpl:281 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-02 15:20:24 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2018-08-02 15:20:24 INFO  LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-08-02 15:20:24 INFO  BasicTypeRegistry:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@16a14c0d
+2018-08-02 15:20:27 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@534e5e5e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-08-02 15:20:28 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@23edcade] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-08-02 15:20:28 INFO  SchemaCreatorImpl:489 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@17838175'
+2018-08-02 15:20:28 INFO  AppController:69 - !!!1111,ROLE_USER,enabled
+2018-08-02 15:20:28 ERROR AppController:80 - java.io.FileNotFoundException: \WEB-INF\users.properties (Системе не удается найти указанный путь)
+2018-08-02 15:27:02 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
+2018-08-02 15:27:02 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
+2018-08-02 15:27:02 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
+2018-08-02 15:27:16 INFO  Version:46 - HHH000412: Hibernate Core {5.3.1.Final}
+2018-08-02 15:27:16 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-02 15:27:17 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-08-02 15:27:18 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-08-02 15:27:18 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-08-02 15:27:18 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.0.3.Final}
+2018-08-02 15:27:19 WARN  pooling:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-02 15:27:19 INFO  pooling:129 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/postgres]
+2018-08-02 15:27:19 INFO  pooling:138 - HHH10001001: Connection properties: {user=postgres, password=****}
+2018-08-02 15:27:19 INFO  pooling:143 - HHH10001003: Autocommit mode: false
+2018-08-02 15:27:19 INFO  DriverManagerConnectionProviderImpl:281 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-02 15:27:19 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2018-08-02 15:27:19 INFO  LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-08-02 15:27:19 INFO  BasicTypeRegistry:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@44c5f9f5
+2018-08-02 15:27:22 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3bae195d] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-08-02 15:27:22 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4f851500] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-08-02 15:27:22 INFO  SchemaCreatorImpl:489 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@88879d5'
+2018-08-02 15:27:23 INFO  AppController:69 - !!!1111,ROLE_USER,enabled
+2018-08-02 15:27:23 ERROR AppController:80 - java.io.FileNotFoundException: \users.properties (Отказано в доступе)
+2018-08-02 16:41:08 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
+2018-08-02 16:41:08 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
+2018-08-02 16:41:08 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100
+2018-08-02 16:41:23 INFO  Version:46 - HHH000412: Hibernate Core {5.3.1.Final}
+2018-08-02 16:41:23 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-08-02 16:41:24 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-08-02 16:41:26 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-08-02 16:41:26 WARN  deprecation:75 - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2018-08-02 16:41:26 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.0.3.Final}
+2018-08-02 16:41:27 WARN  pooling:73 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-08-02 16:41:27 INFO  pooling:129 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://localhost:5432/postgres]
+2018-08-02 16:41:27 INFO  pooling:138 - HHH10001001: Connection properties: {user=postgres, password=****}
+2018-08-02 16:41:27 INFO  pooling:143 - HHH10001003: Autocommit mode: false
+2018-08-02 16:41:27 INFO  DriverManagerConnectionProviderImpl:281 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2018-08-02 16:41:27 INFO  Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2018-08-02 16:41:28 INFO  LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-08-02 16:41:28 INFO  BasicTypeRegistry:159 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@16a14c0d
+2018-08-02 16:41:31 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@534e5e5e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-08-02 16:41:32 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@23edcade] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2018-08-02 16:41:32 INFO  SchemaCreatorImpl:489 - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@17838175'
+2018-08-02 16:41:33 INFO  AppController:70 - !!!1111,ROLE_USER,enabled
+2018-08-02 16:41:33 ERROR AppController:85 - java.lang.NullPointerException
+2018-08-20 21:17:05 INFO  UnsplashStockImageServiceImpl:38 - AccessKey: e3bd60933a617c0a3d4ee21224814eb919cb9ef22f05b4d421e27ff4020e0c52
+2018-08-20 21:17:05 INFO  UnsplashStockImageServiceImpl:39 - SecretKey: daeebadb9efaa4fbe7344005be1896737f4a04e4da4d576d461a11031ffe29fd
+2018-08-20 21:17:05 INFO  UnsplashStockImageServiceImpl:40 - imagesNumber: 100

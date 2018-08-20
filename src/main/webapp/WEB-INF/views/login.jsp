@@ -25,10 +25,8 @@
        <input type="submit" value="Sign in"/><br>
     </form:form>
 
-    <form:form action="/registration" method="post">
-        <input type="submit" value="Sign up" /><br>
-    </form:form>
-
-    <p><a href="/registration">Link to reg</a></p>
+    <form action="/registration">
+         <button type="submit">Sign up</button>
+    </form>
 </body>
 </html>

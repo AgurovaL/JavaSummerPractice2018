@@ -1,10 +1,13 @@
 package com.agurova.models;
 
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
 import lombok.Data;
 import lombok.ToString;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.Entity;
 
@@ -22,7 +25,9 @@ public class User {
     public void addImage(Image image) {
         images.add(image);
     }
+
     public void addRole(Role role) {
         roles.add(role);
     }
+
 }

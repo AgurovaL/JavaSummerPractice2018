@@ -4,11 +4,13 @@ import com.agurova.dal.impl.UserRepositoryImpl;
 import com.agurova.models.User;
 import com.agurova.services.user.dal.UserRepositoryService;
 import lombok.Data;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import java.util.List;
 
 @Data
-public class UserRepositoryServiceImpl implements UserRepositoryService {
+public class UserRepositoryServiceImpl {
     private UserRepositoryImpl userRepository;
 
     public List<User> getAll() {

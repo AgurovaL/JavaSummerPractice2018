@@ -9,10 +9,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.*;
+import java.net.URL;
+import java.util.Properties;
+
 @Controller
 @Data
 public class AppController {
     private static final Logger LOG = Logger.getLogger(AppController.class);
+    private static final String USERS_PATH = "/users.properties";
     private UserMainServiceImpl service;
 
     @GetMapping("/welcome")
@@ -34,8 +39,6 @@ public class AppController {
         }
 
         model.addAttribute("user", new User());
-//        model.addAttribute("login", login);
-//        model.addAttribute("password", password);
         return "login";
     }
 
@@ -60,6 +63,21 @@ public class AppController {
     @PostMapping("/registration")
     public String registrationPost(@ModelAttribute User user) {
         service.save(user);
+
+        Properties properties = new Properties();
+        properties.put("user", "1111,ROLE_USER,enabled");
+        LOG.info("!!!" + properties.getProperty("user"));
+        try
+        {
+            ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+            URL url = classLoader.getResource(USERS_PATH);
+            properties.store(new FileOutputStream(new File(url.toURI())), null);
+        }
+        catch(Exception e)
+        {
+           LOG.error(e);
+        }
+
         return "redirect:/user/" + user.getUserId();
     }
 

@@ -16,7 +16,7 @@
        <form:label path="name">Name</form:label>
        <form:input type="text" path="name"/><br>
 
-        <input type="submit" value="Sign up"/><br>
+       <form:button type="submit">Sign up</form:button>
     </form:form>
 </body>
 </html>
